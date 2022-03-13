@@ -1322,6 +1322,7 @@ namespace UACS
             this.Controls.Add(this.gb_trophy);
             this.Name = "UACS";
             this.Text = "Umamusume All Crown Supporter";
+            this.Shown += new System.EventHandler(this.UACS_Shown);
             this.tab_Grade.ResumeLayout(false);
             this.tab_G1.ResumeLayout(false);
             this.tab_G1.PerformLayout();

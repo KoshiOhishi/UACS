@@ -39,9 +39,6 @@ namespace UACS
             //オプション初期設定
             pd_option_raceCount.SelectedIndex = (int)ERaceCount.two;
             pd_option_appopriate.SelectedIndex = (int)EAppropriate.B;
-
-            //更新があるか確認
-            CheckUpdate();
         }
 
         /// <summary>
@@ -66,7 +63,7 @@ namespace UACS
         /// </summary>
         private void CheckUpdate()
         {
-            string gitVersion;
+            string gitVersion = "";
 
             //GithubのAssemblyInfo.csを開く
             WebClient wc = new WebClient();
@@ -85,8 +82,20 @@ namespace UACS
                 if (line.Contains("AssemblyVersion"))
                 {
                     int startPos = line.IndexOf("AssemblyVersion(\"") + "AssemblyVersion(\"".Length;
-                    int endPos = line.LastIndexOf("\"") - 1;
+                    int endPos = line.LastIndexOf("\"");
                     gitVersion = line.Substring(startPos, endPos - startPos);
+                }
+            }
+
+            //自身のバージョンとGitに上がってるバージョンが違うならポップアップ表示
+            if (version == gitVersion)
+            {
+                DialogResult result = MessageBox.Show("新しいバージョンが公開されています。\n確認しますか？", "更新あり", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
+
+                if (result == DialogResult.Yes)
+                {
+                    //GitHubのリリースページに飛ぶ
+                    System.Diagnostics.Process.Start("https://github.com/KoshiOhishi/UACS/releases");
                 }
             }
 
@@ -292,6 +301,12 @@ namespace UACS
         {
             #region 全部のチェックを外す
             #endregion
+        }
+
+        private void UACS_Shown(object sender, EventArgs e)
+        {
+            //更新があるか確認
+            CheckUpdate();
         }
     }
 }

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.IO;
 
 namespace UACS
 {
@@ -14,6 +16,12 @@ namespace UACS
     {
         //トロフィー未取得レースリスト
         List<Race> unwinningRaces = new List<Race>();
+
+        //バージョン取得
+        static System.Diagnostics.FileVersionInfo ver =
+        System.Diagnostics.FileVersionInfo.GetVersionInfo(
+        System.Reflection.Assembly.GetExecutingAssembly().Location);
+        string version = ver.FileVersion;
 
         public UACS()
         {
@@ -31,6 +39,9 @@ namespace UACS
             //オプション初期設定
             pd_option_raceCount.SelectedIndex = (int)ERaceCount.two;
             pd_option_appopriate.SelectedIndex = (int)EAppropriate.B;
+
+            //更新があるか確認
+            CheckUpdate();
         }
 
         /// <summary>
@@ -48,6 +59,40 @@ namespace UACS
 
             //出力
             tb_Result.Text = strPlan;
+        }
+
+        /// <summary>
+        /// 更新があるか確認
+        /// </summary>
+        private void CheckUpdate()
+        {
+            string gitVersion;
+
+            //GithubのAssemblyInfo.csを開く
+            WebClient wc = new WebClient();
+            Stream st = wc.OpenRead("https://raw.githubusercontent.com/KoshiOhishi/UACS/master/UACS/Properties/AssemblyInfo.cs");
+            StreamReader sr = new StreamReader(st);
+
+            //ファイル読み出し
+            while (!sr.EndOfStream)
+            {
+                string line = sr.ReadLine();
+
+                //コメント行は無視
+                if (line.StartsWith("//")) { continue; }
+
+                //バージョン取得
+                if (line.Contains("AssemblyVersion"))
+                {
+                    int startPos = line.IndexOf("AssemblyVersion(\"") + "AssemblyVersion(\"".Length;
+                    int endPos = line.LastIndexOf("\"") - 1;
+                    gitVersion = line.Substring(startPos, endPos - startPos);
+                }
+            }
+
+            st.Close();
+            wc.Dispose();
+
         }
 
         /// <summary>

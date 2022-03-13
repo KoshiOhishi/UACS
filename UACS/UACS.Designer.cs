@@ -126,11 +126,12 @@ namespace UACS
             this.label_long = new System.Windows.Forms.Label();
             this.label_middle = new System.Windows.Forms.Label();
             this.tab_option = new System.Windows.Forms.TabPage();
+            this.cb_option_hardUser = new System.Windows.Forms.CheckBox();
+            this.pd_option_appopriate = new System.Windows.Forms.ComboBox();
+            this.rabel_appropriate = new System.Windows.Forms.Label();
             this.pd_option_raceCount = new System.Windows.Forms.ComboBox();
             this.label_raceCount = new System.Windows.Forms.Label();
-            this.rabel_appropriate = new System.Windows.Forms.Label();
-            this.pd_option_appopriate = new System.Windows.Forms.ComboBox();
-            this.cb_option_hardUser = new System.Windows.Forms.CheckBox();
+            this.label_version = new System.Windows.Forms.Label();
             this.tab_Grade.SuspendLayout();
             this.tab_G1.SuspendLayout();
             this.tab_G2.SuspendLayout();
@@ -1241,6 +1242,42 @@ namespace UACS
             this.tab_option.Text = "オプション";
             this.tab_option.UseVisualStyleBackColor = true;
             // 
+            // cb_option_hardUser
+            // 
+            this.cb_option_hardUser.AutoSize = true;
+            this.cb_option_hardUser.Location = new System.Drawing.Point(194, 9);
+            this.cb_option_hardUser.Name = "cb_option_hardUser";
+            this.cb_option_hardUser.Size = new System.Drawing.Size(88, 16);
+            this.cb_option_hardUser.TabIndex = 10;
+            this.cb_option_hardUser.Text = "上級者モード";
+            this.cb_option_hardUser.UseVisualStyleBackColor = true;
+            // 
+            // pd_option_appopriate
+            // 
+            this.pd_option_appopriate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_option_appopriate.FormattingEnabled = true;
+            this.pd_option_appopriate.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.pd_option_appopriate.Location = new System.Drawing.Point(8, 71);
+            this.pd_option_appopriate.Name = "pd_option_appopriate";
+            this.pd_option_appopriate.Size = new System.Drawing.Size(43, 20);
+            this.pd_option_appopriate.TabIndex = 9;
+            // 
+            // rabel_appropriate
+            // 
+            this.rabel_appropriate.AutoSize = true;
+            this.rabel_appropriate.Location = new System.Drawing.Point(6, 56);
+            this.rabel_appropriate.Name = "rabel_appropriate";
+            this.rabel_appropriate.Size = new System.Drawing.Size(140, 12);
+            this.rabel_appropriate.TabIndex = 2;
+            this.rabel_appropriate.Text = "出走可能とみなす最低適性";
+            // 
             // pd_option_raceCount
             // 
             this.pd_option_raceCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -1264,47 +1301,21 @@ namespace UACS
             this.label_raceCount.TabIndex = 0;
             this.label_raceCount.Text = "連続出走許容数";
             // 
-            // rabel_appropriate
+            // label_version
             // 
-            this.rabel_appropriate.AutoSize = true;
-            this.rabel_appropriate.Location = new System.Drawing.Point(6, 56);
-            this.rabel_appropriate.Name = "rabel_appropriate";
-            this.rabel_appropriate.Size = new System.Drawing.Size(140, 12);
-            this.rabel_appropriate.TabIndex = 2;
-            this.rabel_appropriate.Text = "出走可能とみなす最低適性";
-            // 
-            // pd_option_appopriate
-            // 
-            this.pd_option_appopriate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pd_option_appopriate.FormattingEnabled = true;
-            this.pd_option_appopriate.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
-            this.pd_option_appopriate.Location = new System.Drawing.Point(8, 71);
-            this.pd_option_appopriate.Name = "pd_option_appopriate";
-            this.pd_option_appopriate.Size = new System.Drawing.Size(43, 20);
-            this.pd_option_appopriate.TabIndex = 9;
-            // 
-            // cb_option_hardUser
-            // 
-            this.cb_option_hardUser.AutoSize = true;
-            this.cb_option_hardUser.Location = new System.Drawing.Point(194, 9);
-            this.cb_option_hardUser.Name = "cb_option_hardUser";
-            this.cb_option_hardUser.Size = new System.Drawing.Size(88, 16);
-            this.cb_option_hardUser.TabIndex = 10;
-            this.cb_option_hardUser.Text = "上級者モード";
-            this.cb_option_hardUser.UseVisualStyleBackColor = true;
+            this.label_version.Location = new System.Drawing.Point(816, 678);
+            this.label_version.Name = "label_version";
+            this.label_version.Size = new System.Drawing.Size(100, 23);
+            this.label_version.TabIndex = 5;
+            this.label_version.Text = "version:1.0.0";
+            this.label_version.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // UACS
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(924, 687);
+            this.ClientSize = new System.Drawing.Size(924, 705);
+            this.Controls.Add(this.label_version);
             this.Controls.Add(this.gb_setting);
             this.Controls.Add(this.tb_Result);
             this.Controls.Add(this.button1);
@@ -1433,6 +1444,7 @@ namespace UACS
         private System.Windows.Forms.Label rabel_appropriate;
         public System.Windows.Forms.ComboBox pd_option_appopriate;
         public System.Windows.Forms.CheckBox cb_option_hardUser;
+        public System.Windows.Forms.Label label_version;
     }
 }
 

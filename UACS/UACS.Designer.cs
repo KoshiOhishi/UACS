@@ -132,6 +132,7 @@ namespace UACS
             this.pd_option_raceCount = new System.Windows.Forms.ComboBox();
             this.label_raceCount = new System.Windows.Forms.Label();
             this.label_version = new System.Windows.Forms.Label();
+            this.btn_option_update = new System.Windows.Forms.Button();
             this.tab_Grade.SuspendLayout();
             this.tab_G1.SuspendLayout();
             this.tab_G2.SuspendLayout();
@@ -1229,6 +1230,7 @@ namespace UACS
             // 
             // tab_option
             // 
+            this.tab_option.Controls.Add(this.btn_option_update);
             this.tab_option.Controls.Add(this.cb_option_hardUser);
             this.tab_option.Controls.Add(this.pd_option_appopriate);
             this.tab_option.Controls.Add(this.rabel_appropriate);
@@ -1309,6 +1311,16 @@ namespace UACS
             this.label_version.TabIndex = 5;
             this.label_version.Text = "version:1.0.0";
             this.label_version.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // btn_option_update
+            // 
+            this.btn_option_update.Location = new System.Drawing.Point(334, 105);
+            this.btn_option_update.Name = "btn_option_update";
+            this.btn_option_update.Size = new System.Drawing.Size(95, 23);
+            this.btn_option_update.TabIndex = 11;
+            this.btn_option_update.Text = "ソフト更新確認";
+            this.btn_option_update.UseVisualStyleBackColor = true;
+            this.btn_option_update.Click += new System.EventHandler(this.btn_option_update_Click);
             // 
             // UACS
             // 
@@ -1446,6 +1458,7 @@ namespace UACS
         public System.Windows.Forms.ComboBox pd_option_appopriate;
         public System.Windows.Forms.CheckBox cb_option_hardUser;
         public System.Windows.Forms.Label label_version;
+        public System.Windows.Forms.Button btn_option_update;
     }
 }
 

@@ -55,6 +55,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WindowsAPI.cs" />
     <EmbeddedResource Include="UACS.resx">
       <DependentUpon>UACS.cs</DependentUpon>
     </EmbeddedResource>

@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net;
 using System.IO;
+using CenterMessageBox;
 
 namespace UACS
 {
@@ -22,6 +23,9 @@ namespace UACS
         System.Diagnostics.FileVersionInfo.GetVersionInfo(
         System.Reflection.Assembly.GetExecutingAssembly().Location);
         string version = ver.FileVersion;
+
+        //フック
+        private IntPtr HHook;
 
         public UACS()
         {
@@ -39,6 +43,9 @@ namespace UACS
             //オプション初期設定
             pd_option_raceCount.SelectedIndex = (int)ERaceCount.two;
             pd_option_appopriate.SelectedIndex = (int)EAppropriate.B;
+
+            //バージョン表示ラベルへ現在のバージョンセット(下一桁は削る)
+            label_version.Text = "version:" + version.Substring(0, version.LastIndexOf("."));
         }
 
         /// <summary>
@@ -61,13 +68,28 @@ namespace UACS
         /// <summary>
         /// 更新があるか確認
         /// </summary>
-        private void CheckUpdate()
+        private void CheckUpdate(bool enablePopupNoUpdate = false)
         {
             string gitVersion = "";
 
             //GithubのAssemblyInfo.csを開く
             WebClient wc = new WebClient();
-            Stream st = wc.OpenRead("https://raw.githubusercontent.com/KoshiOhishi/UACS/master/UACS/Properties/AssemblyInfo.cs");
+            Stream st;
+            try
+            {
+                st = wc.OpenRead("https://raw.githubusercontent.com/KoshiOhishi/UACS/master/UACS/Properties/AssemblyInfo.cs");
+            }
+            catch(Exception e)
+            {
+                if (enablePopupNoUpdate)
+                {
+                    //エラーポップ表示
+                    SetHook(this);
+                    MessageBox.Show(this, "更新確認ができませんでした。\nネットワーク接続を確認してください。", "エラー", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                return;
+            }
+
             StreamReader sr = new StreamReader(st);
 
             //ファイル読み出し
@@ -88,8 +110,9 @@ namespace UACS
             }
 
             //自身のバージョンとGitに上がってるバージョンが違うならポップアップ表示
-            if (version == gitVersion)
+            if (version != gitVersion)
             {
+                SetHook(this);
                 DialogResult result = MessageBox.Show("新しいバージョンが公開されています。\n確認しますか？", "更新あり", MessageBoxButtons.YesNo, MessageBoxIcon.Information);
 
                 if (result == DialogResult.Yes)
@@ -97,6 +120,11 @@ namespace UACS
                     //GitHubのリリースページに飛ぶ
                     System.Diagnostics.Process.Start("https://github.com/KoshiOhishi/UACS/releases");
                 }
+            }
+            else if (enablePopupNoUpdate == true)
+            {
+                SetHook(this);
+                MessageBox.Show("更新は必要ありません。", "更新なし", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
             st.Close();
@@ -307,6 +335,55 @@ namespace UACS
         {
             //更新があるか確認
             CheckUpdate();
+        }
+
+        /// <summary>
+        /// 更新確認ボタンが押されたときの処理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_option_update_Click(object sender, EventArgs e)
+        {
+            //更新無しポップあり
+            CheckUpdate(true);
+        }
+
+
+        //メッセージボックスを中央に表示するためのコード
+        //参考:https://www.ipentec.com/document/csharp-show-message-box-in-center-of-owner-window
+        private void SetHook(IWin32Window owner)
+        {
+            // フック設定
+            IntPtr hInstance = WindowsAPI.GetWindowLong(this.Handle, (int)WindowsAPI.WindowLongParam.GWLP_HINSTANCE);
+            IntPtr threadId = WindowsAPI.GetCurrentThreadId();
+            HHook = WindowsAPI.SetWindowsHookEx((int)WindowsAPI.HookType.WH_CBT, new WindowsAPI.HOOKPROC(CBTProc), hInstance, threadId);
+        }
+        private IntPtr CBTProc(int nCode, IntPtr wParam, IntPtr lParam)
+        {
+            if (nCode == (int)WindowsAPI.HCBT.HCBT_ACTIVATE)
+            {
+                WindowsAPI.RECT rectOwner;
+                WindowsAPI.RECT rectMsgBox;
+                int x, y;
+
+                // オーナーウィンドウの位置と大きさを取得
+                WindowsAPI.GetWindowRect(this.Handle, out rectOwner);
+                // MessageBoxの位置と大きさを取得
+                WindowsAPI.GetWindowRect(wParam, out rectMsgBox);
+
+                // MessageBoxの表示位置を計算
+                x = rectOwner.Left + (rectOwner.Width - rectMsgBox.Width) / 2;
+                y = rectOwner.Top + (rectOwner.Height - rectMsgBox.Height) / 2;
+
+                //MessageBoxの位置を設定
+                WindowsAPI.SetWindowPos(wParam, 0, x, y, 0, 0,
+                  (uint)(WindowsAPI.SetWindowPosFlags.SWP_NOSIZE | WindowsAPI.SetWindowPosFlags.SWP_NOZORDER | WindowsAPI.SetWindowPosFlags.SWP_NOACTIVATE));
+
+                // フック解除
+                WindowsAPI.UnhookWindowsHookEx(HHook);
+            }
+            // 次のプロシージャへのポインタ
+            return WindowsAPI.CallNextHookEx(HHook, nCode, wParam, lParam);
         }
     }
 }

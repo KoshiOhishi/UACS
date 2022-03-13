@@ -305,6 +305,7 @@ namespace UACS
             {
                 races.Add(new Race(uacs.cb_G2_0_nikkeiSinsyun.Text, "芝", "中距離", EDate.シニア1月前半));
             }
+
             #endregion
             #endregion
         }

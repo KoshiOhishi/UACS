@@ -19,7 +19,7 @@ namespace UACS
         {
             InitializeComponent();
 
-            //初期適正
+            //初期適性
             pd_field_turf.SelectedIndex = (int)EAppropriate.A;       //芝
             pd_field_dirt.SelectedIndex = (int)EAppropriate.E;       //ダート
 
@@ -29,7 +29,8 @@ namespace UACS
             pd_distance_long.SelectedIndex = (int)EAppropriate.A;    //長距離
 
             //オプション初期設定
-            pd_raceCount.SelectedIndex = (int)ERaceCount.two;
+            pd_option_raceCount.SelectedIndex = (int)ERaceCount.two;
+            pd_option_appopriate.SelectedIndex = (int)EAppropriate.B;
         }
 
         /// <summary>
@@ -138,6 +139,44 @@ namespace UACS
         /// <param name="e"></param>
         private void btn_G2_allOn_Click(object sender, EventArgs e)
         {
+            #region 全部にチェック
+            cb_G2_0_nikkeiSinsyun.Checked = true;
+            cb_G2_1_tokai.Checked = true;
+            cb_G2_2_amerika.Checked = true;
+            cb_G2_3_kyoto.Checked = true;
+            cb_G2_4_nakayama.Checked = true;
+            cb_G2_5_tulip.Checked = true;
+            cb_G2_6_yayoi.Checked = true;
+            cb_G2_7_kinko.Checked = true;
+            cb_G2_8_phillies.Checked = true;
+            cb_G2_9_hanshinDai.Checked = true;
+            cb_G2_10_spring.Checked = true;
+            cb_G2_11_nikkeiPrize.Checked = true;
+            cb_G2_12_hanshinUma.Checked = true;
+            cb_G2_13_newZealand.Checked = true;
+            cb_G2_14_milers.Checked = true;
+            cb_G2_15_flora.Checked = true;
+            cb_G2_16_aoba.Checked = true;
+            cb_G2_17_kyotoSinb.Checked = true;
+            cb_G2_18_keioSpr.Checked = true;
+            cb_G2_19_meguro.Checked = true;
+            cb_G2_20_sapporo.Checked = true;
+            cb_G2_21_centaur.Checked = true;
+            cb_G2_22_rose.Checked = true;
+            cb_G2_23_sentlight.Checked = true;
+            cb_G2_24_kobe.Checked = true;
+            cb_G2_25_allComer.Checked = true;
+            cb_G2_26_mainichi.Checked = true;
+            cb_G2_27_kyotoDai.Checked = true;
+            cb_G2_28_fuchuUma.Checked = true;
+            cb_G2_29_fuji.Checked = true;
+            cb_G2_30_swan.Checked = true;
+            cb_G2_31_keioJunior.Checked = true;
+            cb_G2_32_argentine.Checked = true;
+            cb_G2_33_daily.Checked = true;
+            cb_G2_34_staiyers.Checked = true;
+            cb_G2_35_hanshinC.Checked = true;
+            #endregion
 
         }
 
@@ -148,7 +187,44 @@ namespace UACS
         /// <param name="e"></param>
         private void btn_G2_allOff_Click(object sender, EventArgs e)
         {
-
+            #region 全部のチェックを外す
+            cb_G2_0_nikkeiSinsyun.Checked = false;
+            cb_G2_1_tokai.Checked = false;
+            cb_G2_2_amerika.Checked = false;
+            cb_G2_3_kyoto.Checked = false;
+            cb_G2_4_nakayama.Checked = false;
+            cb_G2_5_tulip.Checked = false;
+            cb_G2_6_yayoi.Checked = false;
+            cb_G2_7_kinko.Checked = false;
+            cb_G2_8_phillies.Checked = false;
+            cb_G2_9_hanshinDai.Checked = false;
+            cb_G2_10_spring.Checked = false;
+            cb_G2_11_nikkeiPrize.Checked = false;
+            cb_G2_12_hanshinUma.Checked = false;
+            cb_G2_13_newZealand.Checked = false;
+            cb_G2_14_milers.Checked = false;
+            cb_G2_15_flora.Checked = false;
+            cb_G2_16_aoba.Checked = false;
+            cb_G2_17_kyotoSinb.Checked = false;
+            cb_G2_18_keioSpr.Checked = false;
+            cb_G2_19_meguro.Checked = false;
+            cb_G2_20_sapporo.Checked = false;
+            cb_G2_21_centaur.Checked = false;
+            cb_G2_22_rose.Checked = false;
+            cb_G2_23_sentlight.Checked = false;
+            cb_G2_24_kobe.Checked = false;
+            cb_G2_25_allComer.Checked = false;
+            cb_G2_26_mainichi.Checked = false;
+            cb_G2_27_kyotoDai.Checked = false;
+            cb_G2_28_fuchuUma.Checked = false;
+            cb_G2_29_fuji.Checked = false;
+            cb_G2_30_swan.Checked = false;
+            cb_G2_31_keioJunior.Checked = false;
+            cb_G2_32_argentine.Checked = false;
+            cb_G2_33_daily.Checked = false;
+            cb_G2_34_staiyers.Checked = false;
+            cb_G2_35_hanshinC.Checked = false;
+            #endregion
         }
 
         /// <summary>
@@ -158,7 +234,8 @@ namespace UACS
         /// <param name="e"></param>
         private void btn_G3_allOn_Click(object sender, EventArgs e)
         {
-
+            #region 全部にチェック
+            #endregion
         }
 
         /// <summary>
@@ -168,7 +245,8 @@ namespace UACS
         /// <param name="e"></param>
         private void btn_G3_allOff_Click(object sender, EventArgs e)
         {
-
+            #region 全部のチェックを外す
+            #endregion
         }
     }
 }

@@ -31,6 +31,8 @@ namespace UACS
         {
             this.tab_Grade = new System.Windows.Forms.TabControl();
             this.tab_G1 = new System.Windows.Forms.TabPage();
+            this.btn_G1_allOff = new System.Windows.Forms.Button();
+            this.btn_G1_allOn = new System.Windows.Forms.Button();
             this.cb_G1_29_teio = new System.Windows.Forms.CheckBox();
             this.cb_G1_28_japanD = new System.Windows.Forms.CheckBox();
             this.cb_G1_27_jbcR = new System.Windows.Forms.CheckBox();
@@ -62,32 +64,14 @@ namespace UACS
             this.cb_G1_1_takam = new System.Windows.Forms.CheckBox();
             this.cb_G1_0_feb = new System.Windows.Forms.CheckBox();
             this.tab_G2 = new System.Windows.Forms.TabPage();
-            this.tab_G3 = new System.Windows.Forms.TabPage();
-            this.button1 = new System.Windows.Forms.Button();
-            this.tb_Result = new System.Windows.Forms.TextBox();
-            this.gb_trophy = new System.Windows.Forms.GroupBox();
-            this.gb_setting = new System.Windows.Forms.GroupBox();
-            this.label_field = new System.Windows.Forms.Label();
-            this.btn_G1_allOn = new System.Windows.Forms.Button();
-            this.btn_G1_allOff = new System.Windows.Forms.Button();
-            this.label_distance = new System.Windows.Forms.Label();
-            this.pd_field_turf = new System.Windows.Forms.ComboBox();
-            this.label_turf = new System.Windows.Forms.Label();
-            this.label_dirt = new System.Windows.Forms.Label();
-            this.label_sprint = new System.Windows.Forms.Label();
-            this.label_mile = new System.Windows.Forms.Label();
-            this.label_middle = new System.Windows.Forms.Label();
-            this.label_long = new System.Windows.Forms.Label();
-            this.pd_field_dirt = new System.Windows.Forms.ComboBox();
-            this.pd_distance_sprint = new System.Windows.Forms.ComboBox();
-            this.pd_distance_mile = new System.Windows.Forms.ComboBox();
-            this.pd_distance_middle = new System.Windows.Forms.ComboBox();
-            this.pd_distance_long = new System.Windows.Forms.ComboBox();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tab_chara = new System.Windows.Forms.TabPage();
-            this.tab_option = new System.Windows.Forms.TabPage();
-            this.label_raceCount = new System.Windows.Forms.Label();
-            this.pd_raceCount = new System.Windows.Forms.ComboBox();
+            this.btn_G2_allOff = new System.Windows.Forms.Button();
+            this.btn_G2_allOn = new System.Windows.Forms.Button();
+            this.cb_G2_35_hanshinC = new System.Windows.Forms.CheckBox();
+            this.cb_G2_34_staiyers = new System.Windows.Forms.CheckBox();
+            this.cb_G2_33_daily = new System.Windows.Forms.CheckBox();
+            this.cb_G2_32_argentine = new System.Windows.Forms.CheckBox();
+            this.cb_G2_31_keioJunior = new System.Windows.Forms.CheckBox();
+            this.cb_G2_30_swan = new System.Windows.Forms.CheckBox();
             this.cb_G2_29_fuji = new System.Windows.Forms.CheckBox();
             this.cb_G2_28_fuchuUma = new System.Windows.Forms.CheckBox();
             this.cb_G2_27_kyotoDai = new System.Windows.Forms.CheckBox();
@@ -118,16 +102,35 @@ namespace UACS
             this.cb_G2_2_amerika = new System.Windows.Forms.CheckBox();
             this.cb_G2_1_tokai = new System.Windows.Forms.CheckBox();
             this.cb_G2_0_nikkeiSinsyun = new System.Windows.Forms.CheckBox();
-            this.cb_G2_hanshinC = new System.Windows.Forms.CheckBox();
-            this.cb_G2_34_staiyers = new System.Windows.Forms.CheckBox();
-            this.cb_G2_33_daily = new System.Windows.Forms.CheckBox();
-            this.cb_G2_32_argentine = new System.Windows.Forms.CheckBox();
-            this.cb_G2_31_keioJunior = new System.Windows.Forms.CheckBox();
-            this.cb_G2_30_swan = new System.Windows.Forms.CheckBox();
-            this.btn_G2_allOff = new System.Windows.Forms.Button();
-            this.btn_G2_allOn = new System.Windows.Forms.Button();
+            this.tab_G3 = new System.Windows.Forms.TabPage();
             this.btn_G3_allOff = new System.Windows.Forms.Button();
             this.btn_G3_allOn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.tb_Result = new System.Windows.Forms.TextBox();
+            this.gb_trophy = new System.Windows.Forms.GroupBox();
+            this.gb_setting = new System.Windows.Forms.GroupBox();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tab_chara = new System.Windows.Forms.TabPage();
+            this.pd_distance_long = new System.Windows.Forms.ComboBox();
+            this.pd_distance_middle = new System.Windows.Forms.ComboBox();
+            this.label_turf = new System.Windows.Forms.Label();
+            this.label_dirt = new System.Windows.Forms.Label();
+            this.pd_distance_mile = new System.Windows.Forms.ComboBox();
+            this.pd_field_turf = new System.Windows.Forms.ComboBox();
+            this.pd_distance_sprint = new System.Windows.Forms.ComboBox();
+            this.label_sprint = new System.Windows.Forms.Label();
+            this.label_distance = new System.Windows.Forms.Label();
+            this.pd_field_dirt = new System.Windows.Forms.ComboBox();
+            this.label_mile = new System.Windows.Forms.Label();
+            this.label_field = new System.Windows.Forms.Label();
+            this.label_long = new System.Windows.Forms.Label();
+            this.label_middle = new System.Windows.Forms.Label();
+            this.tab_option = new System.Windows.Forms.TabPage();
+            this.pd_option_raceCount = new System.Windows.Forms.ComboBox();
+            this.label_raceCount = new System.Windows.Forms.Label();
+            this.rabel_appropriate = new System.Windows.Forms.Label();
+            this.pd_option_appopriate = new System.Windows.Forms.ComboBox();
+            this.cb_option_hardUser = new System.Windows.Forms.CheckBox();
             this.tab_Grade.SuspendLayout();
             this.tab_G1.SuspendLayout();
             this.tab_G2.SuspendLayout();
@@ -193,6 +196,26 @@ namespace UACS
             this.tab_G1.TabIndex = 0;
             this.tab_G1.Text = "GⅠ";
             this.tab_G1.UseVisualStyleBackColor = true;
+            // 
+            // btn_G1_allOff
+            // 
+            this.btn_G1_allOff.Location = new System.Drawing.Point(261, 579);
+            this.btn_G1_allOff.Name = "btn_G1_allOff";
+            this.btn_G1_allOff.Size = new System.Drawing.Size(154, 28);
+            this.btn_G1_allOff.TabIndex = 28;
+            this.btn_G1_allOff.Text = "GⅠ 全てのチェックを外す";
+            this.btn_G1_allOff.UseVisualStyleBackColor = true;
+            this.btn_G1_allOff.Click += new System.EventHandler(this.btn_G1_allOff_Click);
+            // 
+            // btn_G1_allOn
+            // 
+            this.btn_G1_allOn.Location = new System.Drawing.Point(101, 579);
+            this.btn_G1_allOn.Name = "btn_G1_allOn";
+            this.btn_G1_allOn.Size = new System.Drawing.Size(154, 28);
+            this.btn_G1_allOn.TabIndex = 27;
+            this.btn_G1_allOn.Text = "GⅠ 全てチェック";
+            this.btn_G1_allOn.UseVisualStyleBackColor = true;
+            this.btn_G1_allOn.Click += new System.EventHandler(this.btn_G1_allOn_Click);
             // 
             // cb_G1_29_teio
             // 
@@ -498,7 +521,7 @@ namespace UACS
             // 
             this.tab_G2.Controls.Add(this.btn_G2_allOff);
             this.tab_G2.Controls.Add(this.btn_G2_allOn);
-            this.tab_G2.Controls.Add(this.cb_G2_hanshinC);
+            this.tab_G2.Controls.Add(this.cb_G2_35_hanshinC);
             this.tab_G2.Controls.Add(this.cb_G2_34_staiyers);
             this.tab_G2.Controls.Add(this.cb_G2_33_daily);
             this.tab_G2.Controls.Add(this.cb_G2_32_argentine);
@@ -542,321 +565,85 @@ namespace UACS
             this.tab_G2.Text = "GⅡ";
             this.tab_G2.UseVisualStyleBackColor = true;
             // 
-            // tab_G3
+            // btn_G2_allOff
             // 
-            this.tab_G3.Controls.Add(this.btn_G3_allOff);
-            this.tab_G3.Controls.Add(this.btn_G3_allOn);
-            this.tab_G3.Location = new System.Drawing.Point(4, 22);
-            this.tab_G3.Name = "tab_G3";
-            this.tab_G3.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_G3.Size = new System.Drawing.Size(421, 613);
-            this.tab_G3.TabIndex = 2;
-            this.tab_G3.Text = "GⅢ";
-            this.tab_G3.UseVisualStyleBackColor = true;
+            this.btn_G2_allOff.Location = new System.Drawing.Point(261, 579);
+            this.btn_G2_allOff.Name = "btn_G2_allOff";
+            this.btn_G2_allOff.Size = new System.Drawing.Size(154, 28);
+            this.btn_G2_allOff.TabIndex = 64;
+            this.btn_G2_allOff.Text = "GⅡ 全てのチェックを外す";
+            this.btn_G2_allOff.UseVisualStyleBackColor = true;
+            this.btn_G2_allOff.Click += new System.EventHandler(this.btn_G2_allOff_Click);
             // 
-            // button1
+            // btn_G2_allOn
             // 
-            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
-            this.button1.Location = new System.Drawing.Point(459, 621);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(457, 54);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "Run";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.Run);
+            this.btn_G2_allOn.Location = new System.Drawing.Point(101, 579);
+            this.btn_G2_allOn.Name = "btn_G2_allOn";
+            this.btn_G2_allOn.Size = new System.Drawing.Size(154, 28);
+            this.btn_G2_allOn.TabIndex = 63;
+            this.btn_G2_allOn.Text = "GⅡ 全てチェック";
+            this.btn_G2_allOn.UseVisualStyleBackColor = true;
+            this.btn_G2_allOn.Click += new System.EventHandler(this.btn_G2_allOn_Click);
             // 
-            // tb_Result
+            // cb_G2_35_hanshinC
             // 
-            this.tb_Result.Location = new System.Drawing.Point(459, 202);
-            this.tb_Result.Multiline = true;
-            this.tb_Result.Name = "tb_Result";
-            this.tb_Result.ReadOnly = true;
-            this.tb_Result.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tb_Result.Size = new System.Drawing.Size(457, 413);
-            this.tb_Result.TabIndex = 2;
+            this.cb_G2_35_hanshinC.AutoSize = true;
+            this.cb_G2_35_hanshinC.Location = new System.Drawing.Point(272, 273);
+            this.cb_G2_35_hanshinC.Name = "cb_G2_35_hanshinC";
+            this.cb_G2_35_hanshinC.Size = new System.Drawing.Size(56, 16);
+            this.cb_G2_35_hanshinC.TabIndex = 62;
+            this.cb_G2_35_hanshinC.Text = "阪神C";
+            this.cb_G2_35_hanshinC.UseVisualStyleBackColor = true;
             // 
-            // gb_trophy
+            // cb_G2_34_staiyers
             // 
-            this.gb_trophy.Controls.Add(this.tab_Grade);
-            this.gb_trophy.Location = new System.Drawing.Point(12, 12);
-            this.gb_trophy.Name = "gb_trophy";
-            this.gb_trophy.Size = new System.Drawing.Size(441, 663);
-            this.gb_trophy.TabIndex = 3;
-            this.gb_trophy.TabStop = false;
-            this.gb_trophy.Text = "未取得トロフィー";
+            this.cb_G2_34_staiyers.AutoSize = true;
+            this.cb_G2_34_staiyers.Location = new System.Drawing.Point(136, 273);
+            this.cb_G2_34_staiyers.Name = "cb_G2_34_staiyers";
+            this.cb_G2_34_staiyers.Size = new System.Drawing.Size(88, 16);
+            this.cb_G2_34_staiyers.TabIndex = 61;
+            this.cb_G2_34_staiyers.Text = "ステイヤーズS";
+            this.cb_G2_34_staiyers.UseVisualStyleBackColor = true;
             // 
-            // gb_setting
+            // cb_G2_33_daily
             // 
-            this.gb_setting.Controls.Add(this.tabControl1);
-            this.gb_setting.Location = new System.Drawing.Point(459, 10);
-            this.gb_setting.Name = "gb_setting";
-            this.gb_setting.Size = new System.Drawing.Size(457, 184);
-            this.gb_setting.TabIndex = 4;
-            this.gb_setting.TabStop = false;
-            this.gb_setting.Text = "設定";
+            this.cb_G2_33_daily.AutoSize = true;
+            this.cb_G2_33_daily.Location = new System.Drawing.Point(6, 273);
+            this.cb_G2_33_daily.Name = "cb_G2_33_daily";
+            this.cb_G2_33_daily.Size = new System.Drawing.Size(115, 16);
+            this.cb_G2_33_daily.TabIndex = 60;
+            this.cb_G2_33_daily.Text = "デイリー杯ジュニアS";
+            this.cb_G2_33_daily.UseVisualStyleBackColor = true;
             // 
-            // label_field
+            // cb_G2_32_argentine
             // 
-            this.label_field.AutoSize = true;
-            this.label_field.Location = new System.Drawing.Point(4, 11);
-            this.label_field.Name = "label_field";
-            this.label_field.Size = new System.Drawing.Size(27, 12);
-            this.label_field.TabIndex = 6;
-            this.label_field.Text = "バ場";
+            this.cb_G2_32_argentine.AutoSize = true;
+            this.cb_G2_32_argentine.Location = new System.Drawing.Point(272, 251);
+            this.cb_G2_32_argentine.Name = "cb_G2_32_argentine";
+            this.cb_G2_32_argentine.Size = new System.Drawing.Size(128, 16);
+            this.cb_G2_32_argentine.TabIndex = 59;
+            this.cb_G2_32_argentine.Text = "アルゼンチン共和国杯";
+            this.cb_G2_32_argentine.UseVisualStyleBackColor = true;
             // 
-            // btn_G1_allOn
+            // cb_G2_31_keioJunior
             // 
-            this.btn_G1_allOn.Location = new System.Drawing.Point(101, 579);
-            this.btn_G1_allOn.Name = "btn_G1_allOn";
-            this.btn_G1_allOn.Size = new System.Drawing.Size(154, 28);
-            this.btn_G1_allOn.TabIndex = 27;
-            this.btn_G1_allOn.Text = "GⅠ 全てチェック";
-            this.btn_G1_allOn.UseVisualStyleBackColor = true;
-            this.btn_G1_allOn.Click += new System.EventHandler(this.btn_G1_allOn_Click);
+            this.cb_G2_31_keioJunior.AutoSize = true;
+            this.cb_G2_31_keioJunior.Location = new System.Drawing.Point(136, 251);
+            this.cb_G2_31_keioJunior.Name = "cb_G2_31_keioJunior";
+            this.cb_G2_31_keioJunior.Size = new System.Drawing.Size(103, 16);
+            this.cb_G2_31_keioJunior.TabIndex = 58;
+            this.cb_G2_31_keioJunior.Text = "京王杯ジュニアS";
+            this.cb_G2_31_keioJunior.UseVisualStyleBackColor = true;
             // 
-            // btn_G1_allOff
+            // cb_G2_30_swan
             // 
-            this.btn_G1_allOff.Location = new System.Drawing.Point(261, 579);
-            this.btn_G1_allOff.Name = "btn_G1_allOff";
-            this.btn_G1_allOff.Size = new System.Drawing.Size(154, 28);
-            this.btn_G1_allOff.TabIndex = 28;
-            this.btn_G1_allOff.Text = "GⅠ 全てのチェックを外す";
-            this.btn_G1_allOff.UseVisualStyleBackColor = true;
-            this.btn_G1_allOff.Click += new System.EventHandler(this.btn_G1_allOff_Click);
-            // 
-            // label_distance
-            // 
-            this.label_distance.AutoSize = true;
-            this.label_distance.Location = new System.Drawing.Point(4, 71);
-            this.label_distance.Name = "label_distance";
-            this.label_distance.Size = new System.Drawing.Size(29, 12);
-            this.label_distance.TabIndex = 7;
-            this.label_distance.Text = "距離";
-            // 
-            // pd_field_turf
-            // 
-            this.pd_field_turf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pd_field_turf.FormattingEnabled = true;
-            this.pd_field_turf.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
-            this.pd_field_turf.Location = new System.Drawing.Point(27, 30);
-            this.pd_field_turf.Name = "pd_field_turf";
-            this.pd_field_turf.Size = new System.Drawing.Size(43, 20);
-            this.pd_field_turf.TabIndex = 8;
-            // 
-            // label_turf
-            // 
-            this.label_turf.AutoSize = true;
-            this.label_turf.Location = new System.Drawing.Point(4, 33);
-            this.label_turf.Name = "label_turf";
-            this.label_turf.Size = new System.Drawing.Size(17, 12);
-            this.label_turf.TabIndex = 9;
-            this.label_turf.Text = "芝";
-            // 
-            // label_dirt
-            // 
-            this.label_dirt.AutoSize = true;
-            this.label_dirt.Location = new System.Drawing.Point(90, 33);
-            this.label_dirt.Name = "label_dirt";
-            this.label_dirt.Size = new System.Drawing.Size(32, 12);
-            this.label_dirt.TabIndex = 11;
-            this.label_dirt.Text = "ダート";
-            // 
-            // label_sprint
-            // 
-            this.label_sprint.AutoSize = true;
-            this.label_sprint.Location = new System.Drawing.Point(4, 93);
-            this.label_sprint.Name = "label_sprint";
-            this.label_sprint.Size = new System.Drawing.Size(41, 12);
-            this.label_sprint.TabIndex = 12;
-            this.label_sprint.Text = "短距離";
-            // 
-            // label_mile
-            // 
-            this.label_mile.AutoSize = true;
-            this.label_mile.Location = new System.Drawing.Point(115, 93);
-            this.label_mile.Name = "label_mile";
-            this.label_mile.Size = new System.Drawing.Size(33, 12);
-            this.label_mile.TabIndex = 13;
-            this.label_mile.Text = "マイル";
-            // 
-            // label_middle
-            // 
-            this.label_middle.AutoSize = true;
-            this.label_middle.Location = new System.Drawing.Point(218, 93);
-            this.label_middle.Name = "label_middle";
-            this.label_middle.Size = new System.Drawing.Size(41, 12);
-            this.label_middle.TabIndex = 14;
-            this.label_middle.Text = "中距離";
-            // 
-            // label_long
-            // 
-            this.label_long.AutoSize = true;
-            this.label_long.Location = new System.Drawing.Point(329, 93);
-            this.label_long.Name = "label_long";
-            this.label_long.Size = new System.Drawing.Size(41, 12);
-            this.label_long.TabIndex = 15;
-            this.label_long.Text = "長距離";
-            // 
-            // pd_field_dirt
-            // 
-            this.pd_field_dirt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pd_field_dirt.FormattingEnabled = true;
-            this.pd_field_dirt.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
-            this.pd_field_dirt.Location = new System.Drawing.Point(128, 30);
-            this.pd_field_dirt.Name = "pd_field_dirt";
-            this.pd_field_dirt.Size = new System.Drawing.Size(43, 20);
-            this.pd_field_dirt.TabIndex = 16;
-            // 
-            // pd_distance_sprint
-            // 
-            this.pd_distance_sprint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pd_distance_sprint.FormattingEnabled = true;
-            this.pd_distance_sprint.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
-            this.pd_distance_sprint.Location = new System.Drawing.Point(51, 90);
-            this.pd_distance_sprint.Name = "pd_distance_sprint";
-            this.pd_distance_sprint.Size = new System.Drawing.Size(43, 20);
-            this.pd_distance_sprint.TabIndex = 17;
-            // 
-            // pd_distance_mile
-            // 
-            this.pd_distance_mile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pd_distance_mile.FormattingEnabled = true;
-            this.pd_distance_mile.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
-            this.pd_distance_mile.Location = new System.Drawing.Point(154, 90);
-            this.pd_distance_mile.Name = "pd_distance_mile";
-            this.pd_distance_mile.Size = new System.Drawing.Size(43, 20);
-            this.pd_distance_mile.TabIndex = 18;
-            // 
-            // pd_distance_middle
-            // 
-            this.pd_distance_middle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pd_distance_middle.FormattingEnabled = true;
-            this.pd_distance_middle.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
-            this.pd_distance_middle.Location = new System.Drawing.Point(265, 90);
-            this.pd_distance_middle.Name = "pd_distance_middle";
-            this.pd_distance_middle.Size = new System.Drawing.Size(43, 20);
-            this.pd_distance_middle.TabIndex = 19;
-            // 
-            // pd_distance_long
-            // 
-            this.pd_distance_long.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pd_distance_long.FormattingEnabled = true;
-            this.pd_distance_long.Items.AddRange(new object[] {
-            "A",
-            "B",
-            "C",
-            "D",
-            "E",
-            "F",
-            "G"});
-            this.pd_distance_long.Location = new System.Drawing.Point(376, 90);
-            this.pd_distance_long.Name = "pd_distance_long";
-            this.pd_distance_long.Size = new System.Drawing.Size(43, 20);
-            this.pd_distance_long.TabIndex = 20;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tab_chara);
-            this.tabControl1.Controls.Add(this.tab_option);
-            this.tabControl1.Location = new System.Drawing.Point(8, 18);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(443, 160);
-            this.tabControl1.TabIndex = 21;
-            // 
-            // tab_chara
-            // 
-            this.tab_chara.Controls.Add(this.pd_distance_long);
-            this.tab_chara.Controls.Add(this.pd_distance_middle);
-            this.tab_chara.Controls.Add(this.label_turf);
-            this.tab_chara.Controls.Add(this.label_dirt);
-            this.tab_chara.Controls.Add(this.pd_distance_mile);
-            this.tab_chara.Controls.Add(this.pd_field_turf);
-            this.tab_chara.Controls.Add(this.pd_distance_sprint);
-            this.tab_chara.Controls.Add(this.label_sprint);
-            this.tab_chara.Controls.Add(this.label_distance);
-            this.tab_chara.Controls.Add(this.pd_field_dirt);
-            this.tab_chara.Controls.Add(this.label_mile);
-            this.tab_chara.Controls.Add(this.label_field);
-            this.tab_chara.Controls.Add(this.label_long);
-            this.tab_chara.Controls.Add(this.label_middle);
-            this.tab_chara.Location = new System.Drawing.Point(4, 22);
-            this.tab_chara.Name = "tab_chara";
-            this.tab_chara.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_chara.Size = new System.Drawing.Size(435, 134);
-            this.tab_chara.TabIndex = 0;
-            this.tab_chara.Text = "キャラ適正";
-            this.tab_chara.UseVisualStyleBackColor = true;
-            // 
-            // tab_option
-            // 
-            this.tab_option.Controls.Add(this.pd_raceCount);
-            this.tab_option.Controls.Add(this.label_raceCount);
-            this.tab_option.Location = new System.Drawing.Point(4, 22);
-            this.tab_option.Name = "tab_option";
-            this.tab_option.Padding = new System.Windows.Forms.Padding(3);
-            this.tab_option.Size = new System.Drawing.Size(435, 134);
-            this.tab_option.TabIndex = 1;
-            this.tab_option.Text = "オプション";
-            this.tab_option.UseVisualStyleBackColor = true;
-            // 
-            // label_raceCount
-            // 
-            this.label_raceCount.AutoSize = true;
-            this.label_raceCount.Location = new System.Drawing.Point(6, 10);
-            this.label_raceCount.Name = "label_raceCount";
-            this.label_raceCount.Size = new System.Drawing.Size(89, 12);
-            this.label_raceCount.TabIndex = 0;
-            this.label_raceCount.Text = "連続出走許容数";
-            // 
-            // pd_raceCount
-            // 
-            this.pd_raceCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.pd_raceCount.FormattingEnabled = true;
-            this.pd_raceCount.Items.AddRange(new object[] {
-            "2",
-            "3",
-            "4",
-            "無制限"});
-            this.pd_raceCount.Location = new System.Drawing.Point(8, 28);
-            this.pd_raceCount.Name = "pd_raceCount";
-            this.pd_raceCount.Size = new System.Drawing.Size(121, 20);
-            this.pd_raceCount.TabIndex = 1;
+            this.cb_G2_30_swan.AutoSize = true;
+            this.cb_G2_30_swan.Location = new System.Drawing.Point(6, 251);
+            this.cb_G2_30_swan.Name = "cb_G2_30_swan";
+            this.cb_G2_30_swan.Size = new System.Drawing.Size(58, 16);
+            this.cb_G2_30_swan.TabIndex = 57;
+            this.cb_G2_30_swan.Text = "スワンS";
+            this.cb_G2_30_swan.UseVisualStyleBackColor = true;
             // 
             // cb_G2_29_fuji
             // 
@@ -1158,85 +945,17 @@ namespace UACS
             this.cb_G2_0_nikkeiSinsyun.Text = "日経新春杯";
             this.cb_G2_0_nikkeiSinsyun.UseVisualStyleBackColor = true;
             // 
-            // cb_G2_hanshinC
+            // tab_G3
             // 
-            this.cb_G2_hanshinC.AutoSize = true;
-            this.cb_G2_hanshinC.Location = new System.Drawing.Point(272, 273);
-            this.cb_G2_hanshinC.Name = "cb_G2_hanshinC";
-            this.cb_G2_hanshinC.Size = new System.Drawing.Size(56, 16);
-            this.cb_G2_hanshinC.TabIndex = 62;
-            this.cb_G2_hanshinC.Text = "阪神C";
-            this.cb_G2_hanshinC.UseVisualStyleBackColor = true;
-            // 
-            // cb_G2_34_staiyers
-            // 
-            this.cb_G2_34_staiyers.AutoSize = true;
-            this.cb_G2_34_staiyers.Location = new System.Drawing.Point(136, 273);
-            this.cb_G2_34_staiyers.Name = "cb_G2_34_staiyers";
-            this.cb_G2_34_staiyers.Size = new System.Drawing.Size(88, 16);
-            this.cb_G2_34_staiyers.TabIndex = 61;
-            this.cb_G2_34_staiyers.Text = "ステイヤーズS";
-            this.cb_G2_34_staiyers.UseVisualStyleBackColor = true;
-            // 
-            // cb_G2_33_daily
-            // 
-            this.cb_G2_33_daily.AutoSize = true;
-            this.cb_G2_33_daily.Location = new System.Drawing.Point(6, 273);
-            this.cb_G2_33_daily.Name = "cb_G2_33_daily";
-            this.cb_G2_33_daily.Size = new System.Drawing.Size(115, 16);
-            this.cb_G2_33_daily.TabIndex = 60;
-            this.cb_G2_33_daily.Text = "デイリー杯ジュニアS";
-            this.cb_G2_33_daily.UseVisualStyleBackColor = true;
-            // 
-            // cb_G2_32_argentine
-            // 
-            this.cb_G2_32_argentine.AutoSize = true;
-            this.cb_G2_32_argentine.Location = new System.Drawing.Point(272, 251);
-            this.cb_G2_32_argentine.Name = "cb_G2_32_argentine";
-            this.cb_G2_32_argentine.Size = new System.Drawing.Size(128, 16);
-            this.cb_G2_32_argentine.TabIndex = 59;
-            this.cb_G2_32_argentine.Text = "アルゼンチン共和国杯";
-            this.cb_G2_32_argentine.UseVisualStyleBackColor = true;
-            // 
-            // cb_G2_31_keioJunior
-            // 
-            this.cb_G2_31_keioJunior.AutoSize = true;
-            this.cb_G2_31_keioJunior.Location = new System.Drawing.Point(136, 251);
-            this.cb_G2_31_keioJunior.Name = "cb_G2_31_keioJunior";
-            this.cb_G2_31_keioJunior.Size = new System.Drawing.Size(103, 16);
-            this.cb_G2_31_keioJunior.TabIndex = 58;
-            this.cb_G2_31_keioJunior.Text = "京王杯ジュニアS";
-            this.cb_G2_31_keioJunior.UseVisualStyleBackColor = true;
-            // 
-            // cb_G2_30_swan
-            // 
-            this.cb_G2_30_swan.AutoSize = true;
-            this.cb_G2_30_swan.Location = new System.Drawing.Point(6, 251);
-            this.cb_G2_30_swan.Name = "cb_G2_30_swan";
-            this.cb_G2_30_swan.Size = new System.Drawing.Size(58, 16);
-            this.cb_G2_30_swan.TabIndex = 57;
-            this.cb_G2_30_swan.Text = "スワンS";
-            this.cb_G2_30_swan.UseVisualStyleBackColor = true;
-            // 
-            // btn_G2_allOff
-            // 
-            this.btn_G2_allOff.Location = new System.Drawing.Point(261, 579);
-            this.btn_G2_allOff.Name = "btn_G2_allOff";
-            this.btn_G2_allOff.Size = new System.Drawing.Size(154, 28);
-            this.btn_G2_allOff.TabIndex = 64;
-            this.btn_G2_allOff.Text = "GⅡ 全てのチェックを外す";
-            this.btn_G2_allOff.UseVisualStyleBackColor = true;
-            this.btn_G2_allOff.Click += new System.EventHandler(this.btn_G2_allOff_Click);
-            // 
-            // btn_G2_allOn
-            // 
-            this.btn_G2_allOn.Location = new System.Drawing.Point(101, 579);
-            this.btn_G2_allOn.Name = "btn_G2_allOn";
-            this.btn_G2_allOn.Size = new System.Drawing.Size(154, 28);
-            this.btn_G2_allOn.TabIndex = 63;
-            this.btn_G2_allOn.Text = "GⅡ 全てチェック";
-            this.btn_G2_allOn.UseVisualStyleBackColor = true;
-            this.btn_G2_allOn.Click += new System.EventHandler(this.btn_G2_allOn_Click);
+            this.tab_G3.Controls.Add(this.btn_G3_allOff);
+            this.tab_G3.Controls.Add(this.btn_G3_allOn);
+            this.tab_G3.Location = new System.Drawing.Point(4, 22);
+            this.tab_G3.Name = "tab_G3";
+            this.tab_G3.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_G3.Size = new System.Drawing.Size(421, 613);
+            this.tab_G3.TabIndex = 2;
+            this.tab_G3.Text = "GⅢ";
+            this.tab_G3.UseVisualStyleBackColor = true;
             // 
             // btn_G3_allOff
             // 
@@ -1257,6 +976,329 @@ namespace UACS
             this.btn_G3_allOn.Text = "GⅢ 全てチェック";
             this.btn_G3_allOn.UseVisualStyleBackColor = true;
             this.btn_G3_allOn.Click += new System.EventHandler(this.btn_G3_allOn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("MS UI Gothic", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.button1.Location = new System.Drawing.Point(459, 621);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(457, 54);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Run";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Run);
+            // 
+            // tb_Result
+            // 
+            this.tb_Result.Location = new System.Drawing.Point(459, 202);
+            this.tb_Result.Multiline = true;
+            this.tb_Result.Name = "tb_Result";
+            this.tb_Result.ReadOnly = true;
+            this.tb_Result.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tb_Result.Size = new System.Drawing.Size(457, 413);
+            this.tb_Result.TabIndex = 2;
+            // 
+            // gb_trophy
+            // 
+            this.gb_trophy.Controls.Add(this.tab_Grade);
+            this.gb_trophy.Location = new System.Drawing.Point(12, 12);
+            this.gb_trophy.Name = "gb_trophy";
+            this.gb_trophy.Size = new System.Drawing.Size(441, 663);
+            this.gb_trophy.TabIndex = 3;
+            this.gb_trophy.TabStop = false;
+            this.gb_trophy.Text = "未取得トロフィー";
+            // 
+            // gb_setting
+            // 
+            this.gb_setting.Controls.Add(this.tabControl1);
+            this.gb_setting.Location = new System.Drawing.Point(459, 10);
+            this.gb_setting.Name = "gb_setting";
+            this.gb_setting.Size = new System.Drawing.Size(457, 184);
+            this.gb_setting.TabIndex = 4;
+            this.gb_setting.TabStop = false;
+            this.gb_setting.Text = "設定";
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tab_chara);
+            this.tabControl1.Controls.Add(this.tab_option);
+            this.tabControl1.Location = new System.Drawing.Point(8, 18);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(443, 160);
+            this.tabControl1.TabIndex = 21;
+            // 
+            // tab_chara
+            // 
+            this.tab_chara.Controls.Add(this.pd_distance_long);
+            this.tab_chara.Controls.Add(this.pd_distance_middle);
+            this.tab_chara.Controls.Add(this.label_turf);
+            this.tab_chara.Controls.Add(this.label_dirt);
+            this.tab_chara.Controls.Add(this.pd_distance_mile);
+            this.tab_chara.Controls.Add(this.pd_field_turf);
+            this.tab_chara.Controls.Add(this.pd_distance_sprint);
+            this.tab_chara.Controls.Add(this.label_sprint);
+            this.tab_chara.Controls.Add(this.label_distance);
+            this.tab_chara.Controls.Add(this.pd_field_dirt);
+            this.tab_chara.Controls.Add(this.label_mile);
+            this.tab_chara.Controls.Add(this.label_field);
+            this.tab_chara.Controls.Add(this.label_long);
+            this.tab_chara.Controls.Add(this.label_middle);
+            this.tab_chara.Location = new System.Drawing.Point(4, 22);
+            this.tab_chara.Name = "tab_chara";
+            this.tab_chara.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_chara.Size = new System.Drawing.Size(435, 134);
+            this.tab_chara.TabIndex = 0;
+            this.tab_chara.Text = "キャラ適性";
+            this.tab_chara.UseVisualStyleBackColor = true;
+            // 
+            // pd_distance_long
+            // 
+            this.pd_distance_long.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_distance_long.FormattingEnabled = true;
+            this.pd_distance_long.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.pd_distance_long.Location = new System.Drawing.Point(376, 90);
+            this.pd_distance_long.Name = "pd_distance_long";
+            this.pd_distance_long.Size = new System.Drawing.Size(43, 20);
+            this.pd_distance_long.TabIndex = 20;
+            // 
+            // pd_distance_middle
+            // 
+            this.pd_distance_middle.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_distance_middle.FormattingEnabled = true;
+            this.pd_distance_middle.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.pd_distance_middle.Location = new System.Drawing.Point(265, 90);
+            this.pd_distance_middle.Name = "pd_distance_middle";
+            this.pd_distance_middle.Size = new System.Drawing.Size(43, 20);
+            this.pd_distance_middle.TabIndex = 19;
+            // 
+            // label_turf
+            // 
+            this.label_turf.AutoSize = true;
+            this.label_turf.Location = new System.Drawing.Point(4, 33);
+            this.label_turf.Name = "label_turf";
+            this.label_turf.Size = new System.Drawing.Size(17, 12);
+            this.label_turf.TabIndex = 9;
+            this.label_turf.Text = "芝";
+            // 
+            // label_dirt
+            // 
+            this.label_dirt.AutoSize = true;
+            this.label_dirt.Location = new System.Drawing.Point(90, 33);
+            this.label_dirt.Name = "label_dirt";
+            this.label_dirt.Size = new System.Drawing.Size(32, 12);
+            this.label_dirt.TabIndex = 11;
+            this.label_dirt.Text = "ダート";
+            // 
+            // pd_distance_mile
+            // 
+            this.pd_distance_mile.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_distance_mile.FormattingEnabled = true;
+            this.pd_distance_mile.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.pd_distance_mile.Location = new System.Drawing.Point(154, 90);
+            this.pd_distance_mile.Name = "pd_distance_mile";
+            this.pd_distance_mile.Size = new System.Drawing.Size(43, 20);
+            this.pd_distance_mile.TabIndex = 18;
+            // 
+            // pd_field_turf
+            // 
+            this.pd_field_turf.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_field_turf.FormattingEnabled = true;
+            this.pd_field_turf.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.pd_field_turf.Location = new System.Drawing.Point(27, 30);
+            this.pd_field_turf.Name = "pd_field_turf";
+            this.pd_field_turf.Size = new System.Drawing.Size(43, 20);
+            this.pd_field_turf.TabIndex = 8;
+            // 
+            // pd_distance_sprint
+            // 
+            this.pd_distance_sprint.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_distance_sprint.FormattingEnabled = true;
+            this.pd_distance_sprint.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.pd_distance_sprint.Location = new System.Drawing.Point(51, 90);
+            this.pd_distance_sprint.Name = "pd_distance_sprint";
+            this.pd_distance_sprint.Size = new System.Drawing.Size(43, 20);
+            this.pd_distance_sprint.TabIndex = 17;
+            // 
+            // label_sprint
+            // 
+            this.label_sprint.AutoSize = true;
+            this.label_sprint.Location = new System.Drawing.Point(4, 93);
+            this.label_sprint.Name = "label_sprint";
+            this.label_sprint.Size = new System.Drawing.Size(41, 12);
+            this.label_sprint.TabIndex = 12;
+            this.label_sprint.Text = "短距離";
+            // 
+            // label_distance
+            // 
+            this.label_distance.AutoSize = true;
+            this.label_distance.Location = new System.Drawing.Point(4, 71);
+            this.label_distance.Name = "label_distance";
+            this.label_distance.Size = new System.Drawing.Size(29, 12);
+            this.label_distance.TabIndex = 7;
+            this.label_distance.Text = "距離";
+            // 
+            // pd_field_dirt
+            // 
+            this.pd_field_dirt.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_field_dirt.FormattingEnabled = true;
+            this.pd_field_dirt.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.pd_field_dirt.Location = new System.Drawing.Point(128, 30);
+            this.pd_field_dirt.Name = "pd_field_dirt";
+            this.pd_field_dirt.Size = new System.Drawing.Size(43, 20);
+            this.pd_field_dirt.TabIndex = 16;
+            // 
+            // label_mile
+            // 
+            this.label_mile.AutoSize = true;
+            this.label_mile.Location = new System.Drawing.Point(115, 93);
+            this.label_mile.Name = "label_mile";
+            this.label_mile.Size = new System.Drawing.Size(33, 12);
+            this.label_mile.TabIndex = 13;
+            this.label_mile.Text = "マイル";
+            // 
+            // label_field
+            // 
+            this.label_field.AutoSize = true;
+            this.label_field.Location = new System.Drawing.Point(4, 11);
+            this.label_field.Name = "label_field";
+            this.label_field.Size = new System.Drawing.Size(27, 12);
+            this.label_field.TabIndex = 6;
+            this.label_field.Text = "バ場";
+            // 
+            // label_long
+            // 
+            this.label_long.AutoSize = true;
+            this.label_long.Location = new System.Drawing.Point(329, 93);
+            this.label_long.Name = "label_long";
+            this.label_long.Size = new System.Drawing.Size(41, 12);
+            this.label_long.TabIndex = 15;
+            this.label_long.Text = "長距離";
+            // 
+            // label_middle
+            // 
+            this.label_middle.AutoSize = true;
+            this.label_middle.Location = new System.Drawing.Point(218, 93);
+            this.label_middle.Name = "label_middle";
+            this.label_middle.Size = new System.Drawing.Size(41, 12);
+            this.label_middle.TabIndex = 14;
+            this.label_middle.Text = "中距離";
+            // 
+            // tab_option
+            // 
+            this.tab_option.Controls.Add(this.cb_option_hardUser);
+            this.tab_option.Controls.Add(this.pd_option_appopriate);
+            this.tab_option.Controls.Add(this.rabel_appropriate);
+            this.tab_option.Controls.Add(this.pd_option_raceCount);
+            this.tab_option.Controls.Add(this.label_raceCount);
+            this.tab_option.Location = new System.Drawing.Point(4, 22);
+            this.tab_option.Name = "tab_option";
+            this.tab_option.Padding = new System.Windows.Forms.Padding(3);
+            this.tab_option.Size = new System.Drawing.Size(435, 134);
+            this.tab_option.TabIndex = 1;
+            this.tab_option.Text = "オプション";
+            this.tab_option.UseVisualStyleBackColor = true;
+            // 
+            // pd_option_raceCount
+            // 
+            this.pd_option_raceCount.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_option_raceCount.FormattingEnabled = true;
+            this.pd_option_raceCount.Items.AddRange(new object[] {
+            "2",
+            "3",
+            "4",
+            "無制限"});
+            this.pd_option_raceCount.Location = new System.Drawing.Point(8, 28);
+            this.pd_option_raceCount.Name = "pd_option_raceCount";
+            this.pd_option_raceCount.Size = new System.Drawing.Size(121, 20);
+            this.pd_option_raceCount.TabIndex = 1;
+            // 
+            // label_raceCount
+            // 
+            this.label_raceCount.AutoSize = true;
+            this.label_raceCount.Location = new System.Drawing.Point(6, 10);
+            this.label_raceCount.Name = "label_raceCount";
+            this.label_raceCount.Size = new System.Drawing.Size(89, 12);
+            this.label_raceCount.TabIndex = 0;
+            this.label_raceCount.Text = "連続出走許容数";
+            // 
+            // rabel_appropriate
+            // 
+            this.rabel_appropriate.AutoSize = true;
+            this.rabel_appropriate.Location = new System.Drawing.Point(6, 56);
+            this.rabel_appropriate.Name = "rabel_appropriate";
+            this.rabel_appropriate.Size = new System.Drawing.Size(140, 12);
+            this.rabel_appropriate.TabIndex = 2;
+            this.rabel_appropriate.Text = "出走可能とみなす最低適性";
+            // 
+            // pd_option_appopriate
+            // 
+            this.pd_option_appopriate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.pd_option_appopriate.FormattingEnabled = true;
+            this.pd_option_appopriate.Items.AddRange(new object[] {
+            "A",
+            "B",
+            "C",
+            "D",
+            "E",
+            "F",
+            "G"});
+            this.pd_option_appopriate.Location = new System.Drawing.Point(8, 71);
+            this.pd_option_appopriate.Name = "pd_option_appopriate";
+            this.pd_option_appopriate.Size = new System.Drawing.Size(43, 20);
+            this.pd_option_appopriate.TabIndex = 9;
+            // 
+            // cb_option_hardUser
+            // 
+            this.cb_option_hardUser.AutoSize = true;
+            this.cb_option_hardUser.Location = new System.Drawing.Point(194, 9);
+            this.cb_option_hardUser.Name = "cb_option_hardUser";
+            this.cb_option_hardUser.Size = new System.Drawing.Size(88, 16);
+            this.cb_option_hardUser.TabIndex = 10;
+            this.cb_option_hardUser.Text = "上級者モード";
+            this.cb_option_hardUser.UseVisualStyleBackColor = true;
             // 
             // UACS
             // 
@@ -1347,7 +1389,7 @@ namespace UACS
         private System.Windows.Forms.TabPage tab_option;
         private System.Windows.Forms.TabPage tab_chara;
         private System.Windows.Forms.Label label_raceCount;
-        public System.Windows.Forms.ComboBox pd_raceCount;
+        public System.Windows.Forms.ComboBox pd_option_raceCount;
         public System.Windows.Forms.CheckBox cb_G2_29_fuji;
         public System.Windows.Forms.CheckBox cb_G2_28_fuchuUma;
         public System.Windows.Forms.CheckBox cb_G2_27_kyotoDai;
@@ -1378,7 +1420,7 @@ namespace UACS
         public System.Windows.Forms.CheckBox cb_G2_2_amerika;
         public System.Windows.Forms.CheckBox cb_G2_1_tokai;
         public System.Windows.Forms.CheckBox cb_G2_0_nikkeiSinsyun;
-        public System.Windows.Forms.CheckBox cb_G2_hanshinC;
+        public System.Windows.Forms.CheckBox cb_G2_35_hanshinC;
         public System.Windows.Forms.CheckBox cb_G2_34_staiyers;
         public System.Windows.Forms.CheckBox cb_G2_33_daily;
         public System.Windows.Forms.CheckBox cb_G2_32_argentine;
@@ -1388,6 +1430,9 @@ namespace UACS
         public System.Windows.Forms.Button btn_G2_allOn;
         public System.Windows.Forms.Button btn_G3_allOff;
         public System.Windows.Forms.Button btn_G3_allOn;
+        private System.Windows.Forms.Label rabel_appropriate;
+        public System.Windows.Forms.ComboBox pd_option_appopriate;
+        public System.Windows.Forms.CheckBox cb_option_hardUser;
     }
 }
 

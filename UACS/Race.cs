@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace UACS
 {
+    /// <summary>
+    /// 時期
+    /// </summary>
     public enum EDate
     {
         無し = -1,
@@ -70,6 +73,9 @@ namespace UACS
         シニア12月後半,
     }
 
+    /// <summary>
+    /// 適性
+    /// </summary>
     public enum EAppropriate
     {
         A,
@@ -81,6 +87,9 @@ namespace UACS
         G,
     }
 
+    /// <summary>
+    /// レース出走制限数
+    /// </summary>
     public enum ERaceCount
     {
         two,
@@ -305,13 +314,187 @@ namespace UACS
             {
                 races.Add(new Race(uacs.cb_G2_0_nikkeiSinsyun.Text, "芝", "中距離", EDate.シニア1月前半));
             }
-
+            //東海S
+            if (uacs.cb_G2_1_tokai.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_1_tokai.Text, "ダート", "マイル", EDate.シニア1月後半));
+            }
+            //アメリカJCC
+            if (uacs.cb_G2_2_amerika.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_2_amerika.Text, "芝", "中距離", EDate.シニア1月後半));
+            }
+            //京都記念
+            if (uacs.cb_G2_3_kyoto.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_3_kyoto.Text, "芝", "中距離", EDate.シニア2月前半));
+            }
+            //中山記念
+            if (uacs.cb_G2_4_nakayama.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_4_nakayama.Text, "芝", "マイル", EDate.シニア2月後半));
+            }
+            //チューリップ賞
+            if (uacs.cb_G2_5_tulip.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_5_tulip.Text, "芝", "マイル", EDate.クラシック3月前半));
+            }
+            //弥生賞
+            if (uacs.cb_G2_6_yayoi.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_6_yayoi.Text, "芝", "中距離", EDate.クラシック3月前半));
+            }
+            //金鯱賞
+            if (uacs.cb_G2_7_kinko.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_7_kinko.Text, "芝", "中距離", EDate.シニア3月前半));
+            }
+            //フィリーズレビュー
+            if (uacs.cb_G2_8_phillies.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_8_phillies.Text, "芝", "短距離", EDate.クラシック3月前半));
+            }
+            //阪神大賞典
+            if (uacs.cb_G2_9_hanshinDai.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_9_hanshinDai.Text, "芝", "長距離", EDate.シニア3月後半));
+            }
+            //スプリングS
+            if (uacs.cb_G2_10_spring.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_10_spring.Text, "芝", "マイル", EDate.クラシック3月後半));
+            }
+            //日経賞
+            if (uacs.cb_G2_11_nikkeiPrize.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_11_nikkeiPrize.Text, "芝", "長距離", EDate.シニア3月後半));
+            }
+            //阪神ウマ娘S
+            if (uacs.cb_G2_12_hanshinUma.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_12_hanshinUma.Text, "芝", "マイル", EDate.シニア4月前半));
+            }
+            //ニュージーランドT
+            if (uacs.cb_G2_13_newZealand.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_13_newZealand.Text, "芝", "マイル", EDate.クラシック4月前半));
+            }
+            //マイラーズC
+            if (uacs.cb_G2_14_milers.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_14_milers.Text, "芝", "マイル", EDate.シニア4月後半));
+            }
+            //フローラS
+            if (uacs.cb_G2_15_flora.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_15_flora.Text, "芝", "中距離", EDate.クラシック4月後半));
+            }
+            //青葉賞
+            if (uacs.cb_G2_16_aoba.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_16_aoba.Text, "芝", "中距離", EDate.クラシック4月後半));
+            }
+            //京都新聞杯
+            if (uacs.cb_G2_17_kyotoSinb.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_17_kyotoSinb.Text, "芝", "中距離", EDate.クラシック5月前半));
+            }
+            //京王杯スプリングC
+            if (uacs.cb_G2_18_keioSpr.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_18_keioSpr.Text, "芝", "短距離", EDate.シニア5月前半));
+            }
+            //目黒記念
+            if (uacs.cb_G2_19_meguro.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_19_meguro.Text, "芝", "長距離", EDate.シニア5月後半));
+            }
+            //札幌記念
+            if (uacs.cb_G2_20_sapporo.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_20_sapporo.Text, "芝", "中距離", EDate.クラシック8月後半, EDate.シニア8月後半));
+            }
+            //セントウルS
+            if (uacs.cb_G2_21_centaur.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_21_centaur.Text, "芝", "短距離", EDate.クラシック9月前半, EDate.シニア9月前半));
+            }
+            //ローズS
+            if (uacs.cb_G2_22_rose.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_22_rose.Text, "芝", "マイル", EDate.クラシック9月前半));
+            }
+            //セントライト記念
+            if (uacs.cb_G2_23_sentlight.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_23_sentlight.Text, "芝", "中距離", EDate.クラシック9月後半));
+            }
+            //神戸新聞杯
+            if (uacs.cb_G2_24_kobe.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_24_kobe.Text, "芝", "中距離", EDate.クラシック9月後半));
+            }
+            //オールカマー
+            if (uacs.cb_G2_25_allComer.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_25_allComer.Text, "芝", "中距離", EDate.クラシック9月後半, EDate.シニア9月後半));
+            }
+            //毎日王冠
+            if (uacs.cb_G2_26_mainichi.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_26_mainichi.Text, "芝", "マイル", EDate.クラシック10月前半, EDate.シニア10月前半));
+            }
+            //京都大賞典
+            if (uacs.cb_G2_27_kyotoDai.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_27_kyotoDai.Text, "芝", "中距離", EDate.クラシック10月前半, EDate.シニア10月前半));
+            }
+            //府中ウマ娘S
+            if (uacs.cb_G2_28_fuchuUma.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_28_fuchuUma.Text, "芝", "マイル", EDate.クラシック10月前半, EDate.シニア10月前半));
+            }
+            //富士S
+            if (uacs.cb_G2_29_fuji.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_29_fuji.Text, "芝", "マイル", EDate.クラシック10月後半, EDate.シニア10月後半));
+            }
+            //スワンS
+            if (uacs.cb_G2_30_swan.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_30_swan.Text, "芝", "短距離", EDate.クラシック10月後半, EDate.シニア10月後半));
+            }
+            //京王杯ジュニアS
+            if (uacs.cb_G2_31_keioJunior.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_31_keioJunior.Text, "芝", "短距離", EDate.ジュニア11月前半));
+            }
+            //アルゼンチン共和国杯
+            if (uacs.cb_G2_32_argentine.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_32_argentine.Text, "芝", "長距離", EDate.クラシック11月前半, EDate.シニア11月前半));
+            }
+            //デイリー杯ジュニアS
+            if (uacs.cb_G2_33_daily.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_33_daily.Text, "芝", "マイル", EDate.ジュニア11月前半));
+            }
+            //ステイヤーズS
+            if (uacs.cb_G2_34_staiyers.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_34_staiyers.Text, "芝", "長距離", EDate.クラシック12月前半, EDate.シニア12月前半));
+            }
+            //阪神C
+            if (uacs.cb_G2_35_hanshinC.Checked)
+            {
+                races.Add(new Race(uacs.cb_G2_35_hanshinC.Text, "芝", "短距離", EDate.クラシック12月後半, EDate.シニア12月後半));
+            }
             #endregion
             #endregion
         }
 
         /// <summary>
-        /// 
+        /// レース出走プランを文字列で取得
         /// </summary>
         /// <param name="uacs">プログラム本体</param>
         /// <param name="races">リスト</param>
@@ -323,26 +506,28 @@ namespace UACS
             //周回数
             int orbitCount = 1;
 
-            while (races.Count != 0 && orbitCount < 10)
+            while (races.Count != 0)
             {
-                //適正レース個数確認用
-                Dictionary<string, int> appropriates = new Dictionary<string, int>();
-                appropriates.Add("芝", 0);
-                appropriates.Add("ダート", 0);
-                appropriates.Add("短距離", 0);
-                appropriates.Add("マイル", 0);
-                appropriates.Add("中距離", 0);
-                appropriates.Add("長距離", 0);
-                //上げる適正
-                string growAppropriates = "";
+                //適性レース個数確認用
+                Dictionary<string, int> aptitude = new Dictionary<string, int>();
+                aptitude.Add("芝", 0);
+                aptitude.Add("ダート", 0);
+                aptitude.Add("短距離", 0);
+                aptitude.Add("マイル", 0);
+                aptitude.Add("中距離", 0);
+                aptitude.Add("長距離", 0);
+                //上げる適性
+                string growAptitude = "";
                 //連続出走カウント
                 int runCount = 0;
-
+                //因子使用ポイント　とりあえずレンタル9+自前3の12をマックスとする
+                int useFactorPoint = 0;
+                const int MAXFACTORPOINT = 12;
 
                 //育成回数を記録
                 result += orbitCount + "回目" + Environment.NewLine;
 
-                #region 上げる適正を決める
+                #region 上げる適性を決める
                 //未取得トロフィーレースの中で一番レースに出れる適性の組み合わせを取得
                 //3年分回す
                 for (int date = 0; date <= (int)EDate.シニア12月後半; date++)
@@ -370,42 +555,68 @@ namespace UACS
                     }
 
                     //加算
-                    if (bTurf == true) { appropriates["芝"]++; }
-                    if (bDirt == true) { appropriates["ダート"]++; }
+                    if (bTurf == true) { aptitude["芝"]++; }
+                    if (bDirt == true) { aptitude["ダート"]++; }
 
-                    if (bSprint == true) { appropriates["短距離"]++; }
-                    if (bMile == true) { appropriates["マイル"]++; }
-                    if (bMiddle == true) { appropriates["中距離"]++; }
-                    if (bLong == true) { appropriates["長距離"]++; }
+                    if (bSprint == true) { aptitude["短距離"]++; }
+                    if (bMile == true) { aptitude["マイル"]++; }
+                    if (bMiddle == true) { aptitude["中距離"]++; }
+                    if (bLong == true) { aptitude["長距離"]++; }
                 }
 
                 //個数が多い順に並び替えて
                 //C以下で一番多いレースの適性を上げる
-                foreach (var v in appropriates.OrderByDescending(c => c.Value))
+                foreach (var v in aptitude.OrderByDescending(c => c.Value))
                 {
-                    if (v.Key == "芝" && uacs.pd_field_turf.SelectedIndex > (int)EAppropriate.B ||
-                        v.Key == "ダート" && uacs.pd_field_dirt.SelectedIndex > (int)EAppropriate.B ||
-                        v.Key == "短距離" && uacs.pd_distance_sprint.SelectedIndex > (int)EAppropriate.B ||
-                        v.Key == "マイル" && uacs.pd_distance_mile.SelectedIndex > (int)EAppropriate.B ||
-                        v.Key == "中距離" && uacs.pd_distance_middle.SelectedIndex > (int)EAppropriate.B ||
-                        v.Key == "長距離" && uacs.pd_distance_long.SelectedIndex > (int)EAppropriate.B)
+                    //レース数が0の場合は次へ
+                    if (v.Value == 0) { continue; }
+
+                    //適性
+                    if (v.Key == "芝" && uacs.pd_field_turf.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex ||
+                        v.Key == "ダート" && uacs.pd_field_dirt.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex ||
+                        v.Key == "短距離" && uacs.pd_distance_sprint.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex ||
+                        v.Key == "マイル" && uacs.pd_distance_mile.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex ||
+                        v.Key == "中距離" && uacs.pd_distance_middle.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex ||
+                        v.Key == "長距離" && uacs.pd_distance_long.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex)
                     {
-                        if (growAppropriates != "")
+                        //2つめの適性上げのときはカンマを入れる
+                        if (growAptitude != "")
                         {
-                            growAppropriates += ",";
+                            growAptitude += ",";
                         }
 
-                        growAppropriates += v.Key;
+                        //上げる適性を追加
+                        growAptitude += v.Key;
 
-                        if (IsExistsRunableRace(uacs, growAppropriates, races))
+                        //出走可能なレースがあるかチェック
+                        if (IsExistsRunableRace(uacs, growAptitude, races))
                         {
-                            break;
+                            //上級者モードが有効なら
+                            if (uacs.cb_option_hardUser.Checked)
+                            {
+                                //因子ポイント加算
+                                useFactorPoint += GetAddFactorPoint(uacs, v.Key);
+
+                                //因子ポイントが許容範囲以上になったら
+                                if (useFactorPoint >= MAXFACTORPOINT)
+                                {
+                                    break;
+                                }
+
+                            }
+                            else
+                            {
+                                break;
+                            }
                         }
                     }
                 }
 
+                //上げる適性がないときは「無し」と追記
+                if (growAptitude == "") { growAptitude += "無し"; }
+
                 //結果を出力
-                result += "上げる適正:" + growAppropriates + Environment.NewLine;
+                result += "上げる適性:" + growAptitude + Environment.NewLine;
                 #endregion
 
                 #region 適性をもとに1周回分のレース出走プランを立てる
@@ -413,7 +624,7 @@ namespace UACS
                 for (int date = 0; date <= (int)EDate.シニア12月後半; date++)
                 {
                     //設定された連続出走許容数を超える出場になる場合は1ターンお休み　（index3は無制限）
-                    if (uacs.pd_raceCount.SelectedIndex != (int)ERaceCount.無制限 && runCount >= uacs.pd_raceCount.SelectedIndex + 2)
+                    if (uacs.pd_option_raceCount.SelectedIndex != (int)ERaceCount.無制限 && runCount >= uacs.pd_option_raceCount.SelectedIndex + 2)
                     {
                         runCount = 0;
                         continue;
@@ -425,17 +636,17 @@ namespace UACS
                         //出走時期でなかったら次へ
                         if ((int)v.date1 != date && (int)v.date2 != date) { continue; }
 
-                        //キャラ適正と一致していなかったら次へ
-                        if (v.field == "芝" && uacs.pd_field_turf.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.field) == false) { continue; }
-                        else if (v.field == "ダート" && uacs.pd_field_dirt.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.field) == false) { continue; }
+                        //キャラ適性と一致していなかったら次へ
+                        if (v.field == "芝" && uacs.pd_field_turf.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.field) == false) { continue; }
+                        else if (v.field == "ダート" && uacs.pd_field_dirt.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.field) == false) { continue; }
 
-                        if (v.distance == "短距離" && uacs.pd_distance_sprint.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.distance) == false) { continue; }
-                        else if (v.distance == "マイル" && uacs.pd_distance_mile.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.distance) == false) { continue; }
-                        else if (v.distance == "中距離" && uacs.pd_distance_middle.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.distance) == false) { continue; }
-                        else if (v.distance == "長距離" && uacs.pd_distance_long.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.distance) == false) { continue; }
+                        if (v.distance == "短距離" && uacs.pd_distance_sprint.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.distance) == false) { continue; }
+                        else if (v.distance == "マイル" && uacs.pd_distance_mile.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.distance) == false) { continue; }
+                        else if (v.distance == "中距離" && uacs.pd_distance_middle.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.distance) == false) { continue; }
+                        else if (v.distance == "長距離" && uacs.pd_distance_long.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.distance) == false) { continue; }
 
-                        //適正、時期ともに合格なので結果に出力
-                        result += (EDate)date + " " + v.name + Environment.NewLine;
+                        //適性、時期ともに合格なので結果に出力
+                        result += (EDate)date + " " + v.name + " (" + v.field + " " + v.distance + ")" + Environment.NewLine;
 
                         //リストから削除
                         races.Remove(v);
@@ -466,28 +677,69 @@ namespace UACS
         }
 
         /// <summary>
-        /// レースリストの中に現在の適正で出走可能(B以上)なレースが存在するか
+        /// レースリストの中に現在の適性で出走可能(B以上)なレースが存在するか
         /// </summary>
-        /// <param name="growAppropriates"></param>
-        /// <param name="races"></param>
+        /// <param name="uacs">プログラム本体</param>
+        /// <param name="growAptitude">上げた適性</param>
+        /// <param name="races">未勝利レースリスト</param>
         /// <returns></returns>
-        static bool IsExistsRunableRace(UACS uacs, string growAppropriates, List<Race> races)
+        static bool IsExistsRunableRace(UACS uacs, string growAptitude, List<Race> races)
         {
             //レース全部チェック
             foreach (var v in races)
             {
-                if (v.field == "芝" && uacs.pd_field_turf.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.field) == false) { continue; }
-                else if (v.field == "ダート" && uacs.pd_field_dirt.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.field) == false) { continue; }
+                if (v.field == "芝" && uacs.pd_field_turf.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.field) == false) { continue; }
+                else if (v.field == "ダート" && uacs.pd_field_dirt.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.field) == false) { continue; }
 
-                if (v.distance == "短距離" && uacs.pd_distance_sprint.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.distance) == false) { continue; }
-                else if (v.distance == "マイル" && uacs.pd_distance_mile.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.distance) == false) { continue; }
-                else if (v.distance == "中距離" && uacs.pd_distance_middle.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.distance) == false) { continue; }
-                else if (v.distance == "長距離" && uacs.pd_distance_long.SelectedIndex > (int)EAppropriate.B && growAppropriates.Contains(v.distance) == false) { continue; }
+                if (v.distance == "短距離" && uacs.pd_distance_sprint.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.distance) == false) { continue; }
+                else if (v.distance == "マイル" && uacs.pd_distance_mile.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.distance) == false) { continue; }
+                else if (v.distance == "中距離" && uacs.pd_distance_middle.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.distance) == false) { continue; }
+                else if (v.distance == "長距離" && uacs.pd_distance_long.SelectedIndex > uacs.pd_option_appopriate.SelectedIndex && growAptitude.Contains(v.distance) == false) { continue; }
 
                 return true;
             }
 
             return false;
+        }
+
+        /// <summary>
+        /// 適性を上げるために必要な因子ポイント数を取得 (例えば1段階ＵＰなら1pt、2段階なら4pt)
+        /// </summary>
+        /// <param name="uacs">プログラム本体</param>
+        /// <param name="factorName">因子名 芝 短距離など</param>
+        /// <returns></returns>
+        static int GetAddFactorPoint(UACS uacs, string factorName)
+        {
+            int mul = 0;
+
+            switch (factorName)
+            {
+                case "芝":
+                    mul = uacs.pd_field_turf.SelectedIndex - uacs.pd_option_appopriate.SelectedIndex;
+                    break;
+
+                case "ダート":
+                    mul = uacs.pd_field_dirt.SelectedIndex - uacs.pd_option_appopriate.SelectedIndex;
+                    break;
+
+                case "短距離":
+                    mul = uacs.pd_distance_sprint.SelectedIndex - uacs.pd_option_appopriate.SelectedIndex;
+                    break;
+
+                case "マイル":
+                    mul = uacs.pd_distance_mile.SelectedIndex - uacs.pd_option_appopriate.SelectedIndex;
+                    break;
+
+                case "中距離":
+                    mul = uacs.pd_distance_middle.SelectedIndex - uacs.pd_option_appopriate.SelectedIndex;
+                    break;
+
+                case "長距離":
+                    mul = uacs.pd_distance_long.SelectedIndex - uacs.pd_option_appopriate.SelectedIndex;
+                    break;
+            }
+
+            return mul * 3 - 2;
         }
     }
 }

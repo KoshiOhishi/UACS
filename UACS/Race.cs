@@ -146,9 +146,9 @@ namespace UACS
         public static void LoadUnwinningRaces(UACS uacs, ref List<Race> races)
         {
             /*
-            if (uacs.cb_G2.Checked)
+            if (uacs.cb_G3.Checked)
             {
-                races.Add(new Race(uacs.cb_G2.Text, "", "", EDate));
+                races.Add(new Race(uacs.cb_G3.Text, "", "", EDate));
             }
             */
 
@@ -490,6 +490,353 @@ namespace UACS
                 races.Add(new Race(uacs.cb_G2_35_hanshinC.Text, "芝", "短距離", EDate.クラシック12月後半, EDate.シニア12月後半));
             }
             #endregion
+            #region GⅢ
+            //京都金杯
+            if (uacs.cb_G3_0_kyotokin.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_0_kyotokin.Text, "芝", "マイル", EDate.シニア1月前半));
+            }
+            //中山金杯
+            if (uacs.cb_G3_1_nakayamakin.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_1_nakayamakin.Text, "芝", "中距離", EDate.シニア1月前半));
+            }
+            //シンザン記念
+            if (uacs.cb_G3_2_sinzan.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_2_sinzan.Text, "芝", "マイル", EDate.クラシック1月前半));
+            }
+            //フェアリーS
+            if (uacs.cb_G3_3_fairy.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_3_fairy.Text, "芝", "マイル", EDate.クラシック1月前半));
+            }
+            //愛知杯
+            if (uacs.cb_G3_4_aichi.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_4_aichi.Text, "芝", "中距離", EDate.シニア1月前半));
+            }
+            //京成杯
+            if (uacs.cb_G3_5_keiseihai.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_5_keiseihai.Text, "芝", "中距離", EDate.クラシック1月前半));
+            }
+            //シルクロードS
+            if (uacs.cb_G3_6_silkroad.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_6_silkroad.Text, "芝", "短距離", EDate.シニア1月後半));
+            }
+            //根岸S
+            if (uacs.cb_G3_7_negishi.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_7_negishi.Text, "ダート", "短距離", EDate.シニア1月後半));
+            }
+            //きさらぎ賞
+            if (uacs.cb_G3_8_kisaragi.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_8_kisaragi.Text, "芝", "マイル", EDate.クラシック2月前半));
+            }
+            //東京新聞杯
+            if (uacs.cb_G3_9_tokyoShinbun.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_9_tokyoShinbun.Text, "芝", "マイル", EDate.シニア2月前半));
+            }
+            //クイーンC
+            if (uacs.cb_G3_10_queenC.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_10_queenC.Text, "芝", "マイル", EDate.クラシック2月前半));
+            }
+            //共同通信杯
+            if (uacs.cb_G3_11_kyodoTushin.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_11_kyodoTushin.Text, "芝", "マイル", EDate.クラシック2月前半));
+            }
+            //京都ウマ娘S
+            if (uacs.cb_G3_12_kyotoUma.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_12_kyotoUma.Text, "芝", "短距離", EDate.シニア2月後半));
+            }
+            //ダイヤモンドS
+            if (uacs.cb_G3_13_diamond.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_13_diamond.Text, "芝", "長距離", EDate.シニア2月後半));
+            }
+            //小倉大賞典
+            if (uacs.cb_G3_14_kokuraDai.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_14_kokuraDai.Text, "芝", "マイル", EDate.シニア2月後半));
+            }
+            //アーリントンC
+            if (uacs.cb_G3_15_arinton.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_15_arinton.Text, "芝", "マイル", EDate.クラシック4月前半));
+            }
+            //阪急杯
+            if (uacs.cb_G3_16_hankyu.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_16_hankyu.Text, "芝", "短距離", EDate.シニア2月後半));
+            }
+            //オーシャンS
+            if (uacs.cb_G3_17_osean.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_17_osean.Text, "芝", "短距離", EDate.シニア3月前半));
+            }
+            //中山ウマ娘S
+            if (uacs.cb_G3_18_nakayamaUma.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_18_nakayamaUma.Text, "芝", "マイル", EDate.シニア3月前半));
+            }
+            //ファルコンS
+            if (uacs.cb_G3_19_falcon.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_19_falcon.Text, "芝", "短距離", EDate.クラシック3月後半));
+            }
+            //フラワーC
+            if (uacs.cb_G3_20_flower.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_20_flower.Text, "芝", "マイル", EDate.クラシック3月後半));
+            }
+            //毎日杯
+            if (uacs.cb_G3_21_mainichi.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_21_mainichi.Text, "芝", "マイル", EDate.クラシック3月後半));
+            }
+            //マーチS
+            if (uacs.cb_G3_22_march.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_22_march.Text, "ダート", "マイル", EDate.シニア3月後半));
+            }
+            //ダービー卿CT
+            if (uacs.cb_G3_23_derbyKyo.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_23_derbyKyo.Text, "芝", "マイル", EDate.シニア4月前半));
+            }
+            //アンタレスS
+            if (uacs.cb_G3_24_antares.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_24_antares.Text, "ダート", "マイル", EDate.シニア4月前半));
+            }
+            //福島ウマ娘S
+            if (uacs.cb_G3_25_fukushima.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_25_fukushima.Text, "芝", "マイル", EDate.シニア4月後半));
+            }
+            //新潟大賞典
+            if (uacs.cb_G3_26_nigataDai.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_26_nigataDai.Text, "芝", "中距離", EDate.シニア5月前半));
+            }
+            //平安S
+            if (uacs.cb_G3_27_heian.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_27_heian.Text, "ダート", "中距離", EDate.シニア5月後半));
+            }
+            //葵S
+            if (uacs.cb_G3_28_aoi.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_28_aoi.Text, "芝", "短距離", EDate.クラシック5月後半));
+            }
+            //成尾記念
+            if (uacs.cb_G3_29_naruo.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_29_naruo.Text, "芝", "中距離", EDate.クラシック6月前半, EDate.シニア6月前半));
+            }
+            //マーメイドS
+            if (uacs.cb_G3_30_mermaid.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_30_mermaid.Text, "芝", "中距離", EDate.クラシック6月前半, EDate.シニア6月前半));
+            }
+            //エプソムC
+            if (uacs.cb_G3_31_epsom.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_31_epsom.Text, "芝", "マイル", EDate.クラシック6月前半, EDate.シニア6月前半));
+            }
+            //ユニコーンS
+            if (uacs.cb_G3_32_unicorn.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_32_unicorn.Text, "ダート", "マイル", EDate.クラシック6月後半));
+            }
+            //函館スプリントS
+            if (uacs.cb_G3_33_hakodateSpr.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_33_hakodateSpr.Text, "芝", "短距離", EDate.クラシック6月後半, EDate.シニア6月後半));
+            }
+            //CBC賞
+            if (uacs.cb_G3_34_cbc.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_34_cbc.Text, "芝", "短距離", EDate.クラシック7月前半, EDate.シニア7月前半));
+            }
+            //ラジオNIKKEI賞
+            if (uacs.cb_G3_35_radioNIKKEI.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_35_radioNIKKEI.Text, "芝", "マイル", EDate.クラシック7月前半));
+            }
+            //プロキオンS
+            if (uacs.cb_G3_36_procyon.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_36_procyon.Text, "ダート", "短距離", EDate.クラシック7月前半, EDate.シニア7月前半));
+            }
+            //七夕賞
+            if (uacs.cb_G3_37_tanabata.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_37_tanabata.Text, "芝", "中距離", EDate.クラシック7月前半, EDate.シニア7月前半));
+            }
+            //函館記念
+            if (uacs.cb_G3_38_hakodateKinen.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_38_hakodateKinen.Text, "芝", "中距離", EDate.クラシック7月前半, EDate.シニア7月前半));
+            }
+            //中京記念
+            if (uacs.cb_G3_39_cyukyo.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_39_cyukyo.Text, "芝", "マイル", EDate.クラシック7月後半, EDate.シニア7月後半));
+            }
+            //函館ジュニアS
+            if (uacs.cb_G3_40_hakodateJunior.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_40_hakodateJunior.Text, "芝", "短距離", EDate.ジュニア7月後半));
+            }
+            //アイビスSD
+            if (uacs.cb_G3_41_aibis.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_41_aibis.Text, "芝", "短距離", EDate.クラシック7月後半, EDate.シニア7月後半));
+            }
+            //クイーンS
+            if (uacs.cb_G3_42_queenS.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_42_queenS.Text, "芝", "マイル", EDate.クラシック7月後半, EDate.シニア7月後半));
+            }
+            //小倉記念
+            if (uacs.cb_G3_43_kokuraKinen.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_43_kokuraKinen.Text, "芝", "中距離", EDate.クラシック8月前半, EDate.シニア8月前半));
+            }
+            //レパードS
+            if (uacs.cb_G3_44_repard.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_44_repard.Text, "ダート", "マイル", EDate.クラシック8月前半));
+            }
+            //関屋記念
+            if (uacs.cb_G3_45_sekiya.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_45_sekiya.Text, "芝", "マイル", EDate.クラシック8月前半, EDate.シニア8月前半));
+            }
+            //エルムS
+            if (uacs.cb_G3_46_erum.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_46_erum.Text, "ダート", "マイル", EDate.クラシック8月前半, EDate.シニア8月前半));
+            }
+            //北九州記念
+            if (uacs.cb_G3_47_kitakyusyu.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_47_kitakyusyu.Text, "芝", "短距離", EDate.クラシック8月後半, EDate.シニア8月後半));
+            }
+            //新潟ジュニアS
+            if (uacs.cb_G3_48_nigataJunior.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_48_nigataJunior.Text, "芝", "マイル", EDate.ジュニア8月後半));
+            }
+            //キーンランドC
+            if (uacs.cb_G3_49_keenland.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_49_keenland.Text, "芝", "短距離", EDate.クラシック8月後半, EDate.シニア8月後半));
+            }
+            //札幌ジュニアS
+            if (uacs.cb_G3_50_sapporoJunior.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_50_sapporoJunior.Text, "芝", "マイル", EDate.ジュニア9月前半));
+            }
+            //小倉ジュニアS
+            if (uacs.cb_G3_51_kokuraJunior.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_51_kokuraJunior.Text, "芝", "短距離", EDate.ジュニア9月前半));
+            }
+            //新潟記念
+            if (uacs.cb_G3_52_nigataKinen.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_52_nigataKinen.Text, "芝", "中距離", EDate.クラシック9月前半, EDate.シニア9月前半));
+            }
+            //紫苑S
+            if (uacs.cb_G3_53_shion.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_53_shion.Text, "芝", "中距離", EDate.クラシック9月前半));
+            }
+            //京成杯オータムH
+            if (uacs.cb_G3_54_keiseihaiAutumn.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_54_keiseihaiAutumn.Text, "芝", "マイル", EDate.クラシック9月前半, EDate.シニア9月前半));
+            }
+            //シリウスS
+            if (uacs.cb_G3_55_sirius.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_55_sirius.Text, "ダート", "中距離", EDate.クラシック9月後半, EDate.シニア9月後半));
+            }
+            //サウジアラビアRC
+            if (uacs.cb_G3_56_saudiArabia.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_56_saudiArabia.Text, "芝", "マイル", EDate.ジュニア10月前半));
+            }
+            //アルテミスS
+            if (uacs.cb_G3_57_artemis.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_57_artemis.Text, "芝", "マイル", EDate.ジュニア10月後半));
+            }
+            //ファンタジーS
+            if (uacs.cb_G3_58_fantasy.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_58_fantasy.Text, "芝", "短距離", EDate.ジュニア11月前半));
+            }
+            //みやこS
+            if (uacs.cb_G3_59_miyako.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_59_miyako.Text, "ダート", "マイル", EDate.クラシック11月前半, EDate.シニア11月前半));
+            }
+            //武蔵野S
+            if (uacs.cb_G3_60_musashino.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_60_musashino.Text, "ダート", "マイル", EDate.クラシック11月前半, EDate.シニア11月前半));
+            }
+            //福島記念
+            if (uacs.cb_G3_61_fukushimaKinen.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_61_fukushimaKinen.Text, "芝", "中距離", EDate.クラシック11月前半, EDate.シニア11月前半));
+            }
+            //東スポ杯ジュニアS
+            if (uacs.cb_G3_62_tospoJunior.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_62_tospoJunior.Text, "芝", "マイル", EDate.ジュニア11月後半));
+            }
+            //京都ジュニアS
+            if (uacs.cb_G3_63_kyotoJunior.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_63_kyotoJunior.Text, "芝", "中距離", EDate.ジュニア11月後半));
+            }
+            //京阪杯
+            if (uacs.cb_G3_64_keihan.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_64_keihan.Text, "芝", "短距離", EDate.クラシック11月後半, EDate.シニア11月後半));
+            }
+            //チャレンジC
+            if (uacs.cb_G3_65_challenge.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_65_challenge.Text, "芝", "中距離", EDate.クラシック12月前半, EDate.シニア12月前半));
+            }
+            //中日新聞杯
+            if (uacs.cb_G3_66_chunichiShinbun.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_66_chunichiShinbun.Text, "芝", "中距離", EDate.クラシック12月前半, EDate.シニア12月前半));
+            }
+            //カペラS
+            if (uacs.cb_G3_67_capella.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_67_capella.Text, "ダート", "短距離", EDate.クラシック12月前半, EDate.シニア12月前半));
+            }
+            //ターコイズステークス
+            if (uacs.cb_G3_68_turquoise.Checked)
+            {
+                races.Add(new Race(uacs.cb_G3_68_turquoise.Text, "芝", "マイル", EDate.クラシック12月前半, EDate.シニア12月前半));
+            }
+            #endregion
             #endregion
         }
 
@@ -659,12 +1006,12 @@ namespace UACS
                 }
                 #endregion
 
-                //残りレース数
-                result += "残りレース" +  Environment.NewLine;
-                foreach(var v in races)
-                {
-                    result += v.name + Environment.NewLine;
-                }
+                ////残りレース数
+                //result += "残りレース" +  Environment.NewLine;
+                //foreach(var v in races)
+                //{
+                //    result += v.name + Environment.NewLine;
+                //}
 
                 //周回数を増やす
                 orbitCount++;

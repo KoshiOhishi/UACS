@@ -14,7 +14,7 @@ Umamusume All Crown Suppporter (キャラ全冠称号獲得のためのサポー
 
 ![Snapshot](https://drive.google.com/uc?id=16sQ48OYXDLGA2lrrn2VN_UQ_hPRmxqbV)
 
-** 出走データリスト書き出し*
+_* 出走データリスト書き出し_
 
 
 

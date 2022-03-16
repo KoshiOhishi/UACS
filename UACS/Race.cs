@@ -939,7 +939,7 @@ namespace UACS
                         if (IsExistsRunableRace(uacs, growAptitude, races))
                         {
                             //上級者モードが有効なら
-                            if (uacs.cb_option_hardUser.Checked)
+                            if (uacs.menu_tools_hardmode.Checked)
                             {
                                 //因子ポイント加算
                                 useFactorPoint += GetAddFactorPoint(uacs, v.Key);
@@ -1016,9 +1016,15 @@ namespace UACS
                 //周回数を増やす
                 orbitCount++;
 
-                //改行
-                result += Environment.NewLine;
+                //まだレースが残ってたら改行
+                if (races.Count != 0)
+                {
+                    result += Environment.NewLine;
+                }
             }
+
+            //改行削る
+            result = result.Substring(0, result.Length - 1);
 
             return result;
         }

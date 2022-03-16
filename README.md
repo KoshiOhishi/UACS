@@ -11,7 +11,7 @@ Umamusume All Crown Suppporter (キャラ全冠称号獲得のためのサポー
 	効率のよいレース出走プランが出力されます。
 
 <details>
-<summary>各種機能</summary>
+<summary>各種機能(クリックで展開)</summary>
 
 ### ツールバー
 

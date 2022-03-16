@@ -1024,7 +1024,10 @@ namespace UACS
             }
 
             //改行削る
-            result = result.Substring(0, result.Length - 1);
+            if (result.Length > 0)
+            {
+                result = result.Substring(0, result.Length - 1);
+            }
 
             return result;
         }

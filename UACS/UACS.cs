@@ -618,7 +618,7 @@ namespace UACS
         private void menu_help_explain_Click(object sender, EventArgs e)
         {
             //とりあえずGitHubのホームに飛ばす
-            System.Diagnostics.Process.Start("https://github.com/KoshiOhishi/UACS");
+            System.Diagnostics.Process.Start("https://github.com/taikousi504/UACS");
         }
 
         /// <summary>

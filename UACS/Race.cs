@@ -280,7 +280,7 @@ namespace UACS
             //東京大賞典
             if (uacs.cb_G1_24_tokyo.Checked)
             {
-                races.Add(new Race(uacs.cb_G1_24_tokyo.Text, "芝", "中距離", EDate.クラシック12月後半, EDate.シニア12月後半));
+                races.Add(new Race(uacs.cb_G1_24_tokyo.Text, "ダート", "中距離", EDate.クラシック12月後半, EDate.シニア12月後半));
             }
             //JBCクラシック
             if (uacs.cb_G1_25_jbcC.Checked)

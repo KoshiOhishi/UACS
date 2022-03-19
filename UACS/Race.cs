@@ -867,7 +867,7 @@ namespace UACS
                 string growAptitude = "";
                 //連続出走カウント
                 int runCount = 0;
-                //因子使用ポイント　とりあえずレンタル9+自前3の12をマックスとする
+                //因子使用回数
                 int useFactorPoint = 0;
                 const int MAXFACTORPOINT = 12;
 
@@ -1095,7 +1095,7 @@ namespace UACS
                     break;
             }
 
-            return mul * 3 - 2;
+            return mul * 3;
         }
     }
 }

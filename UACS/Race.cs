@@ -869,7 +869,7 @@ namespace UACS
                 int runCount = 0;
                 //因子使用回数
                 int useFactorPoint = 0;
-                const int MAXFACTORPOINT = 12;
+                const int MAXFACTORPOINT = 6;
 
                 //育成回数を記録
                 result += orbitCount + "回目" + Environment.NewLine;
